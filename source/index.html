@@ -18,8 +18,8 @@
                       <span class="visually-hidden">Открыть меню</span>
                       <span class="page-header__menu-toggle-bar"></span>
                     </button>
-                    <a class="logo" href="#" aria-label="Логотип Интернет-магазина Автозапчастей">
-                      <img src="img/logo.png" width="69" height="38">
+                    <a class="page-header__logo" href="#" aria-label="Логотип Интернет-магазина Автозапчастей">
+                      <img class="page-header__img" src="img/logo.png" width="69" height="38">
                     </a>
                     <div class="menu">
                         <div class="menu__wrap">
@@ -133,18 +133,69 @@
             <h2 class="promotions__title visually-hidden">Анонс товаров</h2>
             <div class="promotions__container">
                 <div class="promotions__slider">
-                    <ul class="slider">
-                        <li class="slider__item"></li>
-                        <li class="slider__item"></li>
-                        <li class="slider__item"></li>
-                        <li class="slider__item"></li>
-                        <li class="slider__item"></li>
-                        <li class="slider__item"></li>
-                    </ul>
+                  <input type="radio" class="promotions__slider-control slide_1" name="slide_control" id="slide_1">
+                  <input type="radio" class="promotions__slider-control slide_2" name="slide_control" id="slide_2">
+                  <input type="radio" class="promotions__slider-control slide_3" name="slide_control" id="slide_3">
+                  <input type="radio" class="promotions__slider-control slide_4" name="slide_control" id="slide_4" checked>
+                  <input type="radio" class="promotions__slider-control slide_5" name="slide_control" id="slide_5">
+                  <input type="radio" class="promotions__slider-control slide_6" name="slide_control" id="slide_6">
+
+                  <ul class="promotions__slider-list">
+                    <li class="promotions__slide autochemistry">
+                      <h3 class="promotions__slide-title">Автохимия</h3>
+                      <p class="promotions__slide-description">На все виды автомобилей</p>
+                    </li>
+                    <li class="promotions__slide tires">
+                      <h3 class="promotions__slide-title">Шины и диски</h3>
+                      <p class="promotions__slide-description">На все виды автомобилей</p>
+                    </li>
+                    <li class="promotions__slide instruments">
+                      <h3 class="promotions__slide-title">Инструменты</h3>
+                      <p class="promotions__slide-description">Для всех видов работ</p>
+                    </li>
+                    <li class="promotions__slide spares">
+                      <h3 class="promotions__slide-title">Запчасти</h3>
+                      <p class="promotions__slide-description">На все виды автомобилей</p>
+                    </li>
+                    <li class="promotions__slide car-electronics">
+                      <h3 class="promotions__slide-title">Автоэлектроника</h3>
+                      <p class="promotions__slide-description">На все виды автомобилей</p>
+                    </li>
+                    <li class="promotions__slide accessories">
+                      <h3 class="promotions__slide-title">Аксессуары и другое</h3>
+                      <p class="promotions__slide-description">На все виды автомобилей</p>
+                    </li>
+                  </ul>
+
+                  <ul class="promotions__slider-switchers">
+                    <li>
+                      <label class="promotions__slider-switch promotions__slider-switch--1" for="slide_1"></label>
+                    </li>
+                    <li>
+                      <label class="promotions__slider-switch promotions__slider-switch--2" for="slide_2"></label>
+                    </li>
+                    <li>
+                      <label class="promotions__slider-switch promotions__slider-switch--3" for="slide_3"></label>
+                    </li>
+                    <li>
+                      <label class="promotions__slider-switch promotions__slider-switch--4" for="slide_4"></label>
+                    </li>
+                    <li>
+                      <label class="promotions__slider-switch promotions__slider-switch--5" for="slide_5"></label>
+                    </li>
+                    <li>
+                      <label class="promotions__slider-switch promotions__slider-switch--6" for="slide_6"></label>
+                    </li>
+                  </ul>
                 </div>
+
                 <div class="promotion__action">
+                    <input type="radio" class="promotions__action-control action_1" name="action_control" id="action_1" checked>
+                    <input type="radio" class="promotions__action-control action_2" name="action_control" id="action_2">
+                    <input type="radio" class="promotions__action-control action_3" name="action_control" id="action_3">
+
                     <ul class="action">
-                        <li class="action__item">
+                        <li class="action__item action__item-1">
                             <div class="action__price">
                                 <p class="action__price-new">200</p>
                                 <p class="action__price-old">500</p>
@@ -160,7 +211,7 @@
                             </div>
                             <a class="action__link" href="#">Перейти на страницу товара</a>
                         </li>
-                        <li class="action__item">
+                        <li class="action__item action__item-2">
                             <div class="action__price">
                                 <p class="action__price-new">200</p>
                                 <p class="action__price-old">500</p>
@@ -176,7 +227,7 @@
                             </div>
                             <a class="action__link" href="#">Перейти на страницу товара</a>
                         </li>
-                        <li class="action__item">
+                        <li class="action__item action__item-3">
                             <div class="action__price">
                                 <p class="action__price-new">200</p>
                                 <p class="action__price-old">500</p>
@@ -193,6 +244,18 @@
                             <a class="action__link" href="#">Перейти на страницу товара</a>
                         </li>
                     </ul>
+
+                    <ul class="promotions__action-switchers">
+                        <li>
+                          <label class="promotions__action-switch promotions__action-switch--1" for="action_1"></label>
+                        </li>
+                        <li>
+                          <label class="promotions__action-switch promotions__action-switch--2" for="action_2"></label>
+                        </li>
+                        <li>
+                          <label class="promotions__action-switch promotions__action-switch--3" for="action_3"></label>
+                        </li>
+                      </ul>
                 </div>
             </div>
         </section>
