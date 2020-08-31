@@ -280,33 +280,45 @@
                     </ul>
                 </div>
                 <div class="search__bottom-line">
-                    <ul class="search__input-list">
-                        <li class="search__input" id="search-vin">
-                            <form method="POST" action="#">
+                    <ul class="search__list">
+                        <li class="search__item" id="search-vin">
+                            <form class="search__form" method="POST" action="#">
                                 <label class="visually-hidden" for="search-vin-input">Введите vin код</label>
-                                <input type="search" placeholder="Введите vin код" id="search-vin-input" name="search-input" required>
-                                <button class="search__button" type="submit">искать</button>
+                                <input class="search__input" type="search" placeholder="Введите vin код" id="search-vin-input" name="search-input" required>
+                                <button class="search__button" type="submit">
+                                  <span class="visually-hidden">искать</span>
+                                  <img class="search__logo" src="img/search.svg" width="23" height="23">
+                                </button>
                             </form>
                         </li>
-                        <li class="search__input" id="search-brand">
-                            <form>
+                        <li class="search__item visually-hidden" id="search-brand">
+                            <form class="search__form" method="POST" action="#">
                                 <label class="visually-hidden" for="search-brand-input">Введите марку автомобиля</label>
-                                <input type="search" placeholder="Введите марку автомобиля" id="search-brand-input" name="search-input" required>
-                                <button class="search__button" type="submit">искать</button>
+                                <input class="search__input" type="search" placeholder="Введите марку автомобиля" id="search-brand-input" name="search-input" required>
+                                <button class="search__button" type="submit">
+                                  <span class="visually-hidden">искать</span>
+                                  <img class="search__logo" src="img/search.svg" width="23" height="23">
+                                </button>
                             </form>
                         </li>
-                        <li class="search__input" id="search-name">
-                            <form>
+                        <li class="search__item visually-hidden" id="search-name">
+                            <form class="search__form" method="POST" action="#">
                                 <label class="visually-hidden" for="search-name-input">Введите название товара</label>
-                                <input type="search" placeholder="Введите название товара" id="search-name-input" name="search-input" required>
-                                <button class="search__button" type="submit">искать</button>
+                                <input class="search__input" type="search" placeholder="Введите название товара" id="search-name-input" name="search-input" required>
+                                <button class="search__button" type="submit">
+                                  <span class="visually-hidden">искать</span>
+                                  <img class="search__logo" src="img/search.svg" width="23" height="23">
+                                </button>
                             </form>
                         </li>
-                        <li class="search__input" id="search-article">
-                            <form>
+                        <li class="search__item visually-hidden" id="search-article">
+                            <form class="search__form" method="POST" action="#">
                                 <label class="visually-hidden" for="search-article-input">Введите артикул</label>
-                                <input type="search" placeholder="Введите артикул" id="search-article-input" name="search-input" required>
-                                <button class="search__button" type="submit">искать</button>
+                                <input class="search__input" type="search" placeholder="Введите артикул" id="search-article-input" name="search-input" required>
+                                <button class="search__button" type="submit">
+                                  <span class="visually-hidden">искать</span>
+                                  <img class="search__logo" src="img/search.svg" width="23" height="23">
+                                </button>
                             </form>
                         </li>
                     </ul>
