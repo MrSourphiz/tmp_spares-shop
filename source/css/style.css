@@ -545,5 +545,36 @@ p {
   border: none;
   cursor: pointer;
 }
+.banner {
+  padding-top: 40px;
+}
+.banner__container {
+  width: 320px;
+  height: 64px;
+  background: -webkit-gradient(linear, left top, right top, from(#891dd0), to(#fb8b3c));
+  background: linear-gradient(90deg, #891dd0 0%, #fb8b3c 100%);
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.banner__title {
+  font-size: 35px;
+  line-height: 37px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.banner__description {
+  font-size: 15px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: lowercase;
+  text-align: center;
+  color: #ffffff;
+}
 
 /*# sourceMappingURL=style.css.map */
