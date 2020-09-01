@@ -255,7 +255,7 @@
                         <li>
                           <label class="promotions__action-switch promotions__action-switch--3" for="action_3"></label>
                         </li>
-                      </ul>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -395,49 +395,62 @@
                 </ul>
                 <ul class="popular-items__list">
                     <li class="popular-items__item" id="tabs-spares">
-                        <div class="slider">
-                            <ul class="slider__list">
-                                <li class="slider__item card-product">
+                        <div class="popular-items__slider">
+                            <input type="radio" class="popular-items__slider-control popular-items__slider-control--1" name="slide_control" id="popular-item_1" checked>
+                            <input type="radio" class="popular-items__slider-control popular-items__slider-control--2" name="slide_control" id="popular-item_2">
+                            <input type="radio" class="popular-items__slider-control popular-items__slider-control--3" name="slide_control" id="popular-item_3">
+                            <ul class="popular-items__slider-list">
+                                <li class="popular-items__slider-item card-product">
                                     <img src="img/" alt="фото товара">
                                     <h3>Ремень</h3>
                                     <p>440 ₽</p>
                                 </li>
-                                <li class="slider__item card-product">
+                                <li class="visually-hidden popular-items__slider-item card-product">
                                     <img src="img/" alt="фото товара">
                                     <h3>Шина 205/80 R16 104Q Misha RF Power Grum</h3>
                                     <p>11 680 ₽</p>
                                 </li>
-                                <li class="slider__item card-product">
+                                <li class="visually-hidden popular-items__slider-item card-product">
                                     <img src="img/" alt="фото товара">
                                     <h3>Фара Nokian 2025</h3>
                                     <p>680 ₽</p>
                                 </li>
-                                <li class="slider__item card-product">
+                                <li class="visually-hidden popular-items__slider-item card-product">
                                     <img src="img/" alt="фото товара">
                                     <h3>Шина 245/60 R18 105T Contyther Crosh Conta...</h3>
                                     <p>440 ₽</p>
                                 </li>
                             </ul>
-                            <div class="slider__controls"></div>
+                            <ul class="popular-items__switchers">
+                              <li>
+                                <label class="popular-items__switch popular-items__switch--1" for="popular-item_1"></label>
+                              </li>
+                              <li>
+                                <label class="popular-items__switch popular-items__switch--2" for="popular-item_2"></label>
+                              </li>
+                              <li>
+                                <label class="popular-items__switch popular-items__switch--3" for="popular-item_3"></label>
+                              </li>
+                            </ul>
                         </div>
                     </li>
-                    <li class="popular-items__item" id="tabs-autochemicals">
+                    <li class="popular-items__item visually-hidden" id="tabs-autochemicals">
                         <p>будет позже</p>
                     </li>
-                    <li class="popular-items__item" id="tabs-tools">
+                    <li class="popular-items__item visually-hidden" id="tabs-tools">
                         <p>будет позже</p>
                     </li>
-                    <li class="popular-items__item" id="tabs-autoelectronics">
+                    <li class="popular-items__item visually-hidden" id="tabs-autoelectronics">
                         <p>будет позже</p>
                     </li>
-                    <li class="popular-items__item" id="tabs-tools">
+                    <li class="popular-items__item visually-hidden" id="tabs-tools">
                         <p>будет позже</p>
                     </li>
-                    <li class="popular-items__item" id="tabs-accessories">
+                    <li class="popular-items__item visually-hidden" id="tabs-accessories">
                         <p>будет позже</p>
                     </li>
                 </ul>
-                <button type="button">смотреть еще</button>
+                <button class="popular-items__button" type="button">смотреть еще</button>
             </div>
         </section>
 
@@ -473,6 +486,9 @@
             <ul class="recently-viewed__list">
                 <li class="recently-viewed__item" id="tabs-spares">
                     <div class="slider">
+                        <input type="radio" class="promotions__slider-control slide_1" name="slide_control" id="slide_1" checked>
+                        <input type="radio" class="promotions__slider-control slide_2" name="slide_control" id="slide_2">
+                        <input type="radio" class="promotions__slider-control slide_3" name="slide_control" id="slide_3">
                         <ul class="slider__list">
                             <li class="slider__item card-product">
                                 <img src="img/" alt="фото товара">
