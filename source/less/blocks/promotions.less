@@ -1,0 +1,230 @@
+.promotions {
+  margin-top: 15px;
+}
+
+.promotions__slider {
+  position: relative;
+
+  width: 320px;
+  height: 164px;
+
+  background: linear-gradient(90deg, rgba(137, 29, 208, 1) 0%, rgba(251, 139, 60, 1) 100%);
+
+  margin-bottom: 25px;
+}
+
+.promotions__slider-control,
+.promotions__action-control {
+  display: none;
+}
+
+.promotions__slide {
+  display: none;
+
+  position: absolute;
+  top: 63px;
+  left: 17px;
+
+  width: 165px;
+  height: 45px;
+
+  color: #ffffff;
+}
+
+.promotions__slide-title {
+  font-size: 29px;
+  text-transform: uppercase;
+}
+
+.promotions__slide-description {
+  font-size: 13px;
+  text-transform: lowercase;
+}
+
+.promotions__slider-switchers {
+  position: absolute;
+  bottom: 15px;
+  left: 125px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 71px;
+}
+
+.promotions__slider-switch {
+  position: relative;
+}
+
+.promotions__slider-switch::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: transparent;
+
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+
+  cursor: pointer;
+}
+
+.promotions__slider-switch--1::after,
+.promotions__slider-switch--2::after,
+.promotions__slider-switch--3::after,
+.promotions__slider-switch--4::after,
+.promotions__slider-switch--5::after,
+.promotions__slider-switch--6::after {
+  content: "";
+
+  display: none;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+
+  cursor: pointer;
+}
+
+.slide_1:checked ~ .promotions__slider-list .autochemistry,
+.slide_2:checked ~ .promotions__slider-list .tires,
+.slide_3:checked ~ .promotions__slider-list .instruments,
+.slide_4:checked ~ .promotions__slider-list .spares,
+.slide_5:checked ~ .promotions__slider-list .car-electronics,
+.slide_6:checked ~ .promotions__slider-list .accessories {
+  display: block;
+}
+
+.slide_1:checked ~ .promotions__slider-switchers .promotions__slider-switch--1::after,
+.slide_2:checked ~ .promotions__slider-switchers .promotions__slider-switch--2::after,
+.slide_3:checked ~ .promotions__slider-switchers .promotions__slider-switch--3::after,
+.slide_4:checked ~ .promotions__slider-switchers .promotions__slider-switch--4::after,
+.slide_5:checked ~ .promotions__slider-switchers .promotions__slider-switch--5::after,
+.slide_6:checked ~ .promotions__slider-switchers .promotions__slider-switch--6::after {
+  display: block;
+}
+
+.promotion__action {
+  position: relative;
+
+  padding-top: 25px;
+  padding-bottom: 57px;
+}
+
+.action__item {
+  position: relative;
+
+  display: none;
+
+  width: 268px;
+  height: 395px;
+
+  margin: 0 auto;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.action__item::before {
+  content: "АКЦИЯ";
+
+  position: absolute;
+  top: 26px;
+  left: -28px;
+
+  width: 79px;
+  height: 15px;
+
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  background: linear-gradient(90deg, rgba(137, 29, 208, 1) 0%, rgba(251, 139, 60, 1) 100%);
+
+  transform: rotate(-90deg);
+}
+
+.promotions__action-switchers {
+  position: absolute;
+  bottom: 37px;
+  left: 117px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 86px;
+}
+
+.promotions__action-switch {
+  position: relative;
+}
+
+.promotions__action-switch::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 14px;
+  height: 14px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  border-radius: 100%;
+
+  cursor: pointer;
+}
+
+.promotions__action-switch--1::after,
+.promotions__action-switch--2::after,
+.promotions__action-switch--3::after {
+  content: "";
+
+  display: none;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 14px;
+  height: 14px;
+
+  background-color: #ff7931;
+
+  border-radius: 100%;
+
+  cursor: pointer;
+}
+
+.action_1:checked ~ .action .action__item-1,
+.action_2:checked ~ .action .action__item-2,
+.action_3:checked ~ .action .action__item-3 {
+  display: block;
+}
+
+.action_1:checked ~ .promotions__action-switchers .promotions__action-switch--1::after,
+.action_2:checked ~ .promotions__action-switchers .promotions__action-switch--2::after,
+.action_3:checked ~ .promotions__action-switchers .promotions__action-switch--3::after {
+  display: block;
+}
+
