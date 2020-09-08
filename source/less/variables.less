@@ -1,0 +1,42 @@
+@mobile-width: 320px;
+@tablet-width: 708px;
+@desktop-width: 1167px;
+
+@main-font: "Arial", sans-serif;
+@text-color: #48494d;
+
+@bg-color-grey: rgba(0, 0, 0, 0.2);
+@bg-color-orange: #ff7931;
+@bg-color-gradient: linear-gradient(90deg, rgba(137, 29, 208, 1) 0%, rgba(251, 139, 60, 1) 100%);
+
+
+@border: 1px solid #c4c4c4;
+
+.mobile-button-grey() {
+  width: 270px;
+  height: 50px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #bdbec2;
+
+  background-color: #f0f0f4;
+
+  border: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: rgba(68, 68, 68, 0.3);
+  }
+}

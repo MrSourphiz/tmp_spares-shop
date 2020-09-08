@@ -2,7 +2,7 @@ body {
   min-width: 320px;
   font-family: "Arial", sans-serif;
   font-style: normal;
-  color: #000000;
+  color: #48494d;
   margin: 0;
   padding: 0;
 }
@@ -27,6 +27,25 @@ p {
 }
 .visually-hidden {
   display: none;
+}
+.slider__control {
+  display: none;
+}
+.control--1:checked ~ .slider__list .slide--1,
+.control--2:checked ~ .slider__list .slide--2,
+.control--3:checked ~ .slider__list .slide--3,
+.control--4:checked ~ .slider__list .slide--4,
+.control--5:checked ~ .slider__list .slide--5,
+.control--6:checked ~ .slider__list .slide--6 {
+  display: block;
+}
+.control--1:checked ~ .slider__switchers .switch--1::after,
+.control--2:checked ~ .slider__switchers .switch--2::after,
+.control--3:checked ~ .slider__switchers .switch--3::after,
+.control--4:checked ~ .slider__switchers .switch--4::after,
+.control--5:checked ~ .slider__switchers .switch--5::after,
+.control--6:checked ~ .slider__switchers .switch--6::after {
+  display: block;
 }
 .page-header__container {
   display: -webkit-box;
@@ -119,10 +138,6 @@ p {
   background: linear-gradient(90deg, #891dd0 0%, #fb8b3c 100%);
   margin-bottom: 25px;
 }
-.promotions__slider-control,
-.promotions__action-control {
-  display: none;
-}
 .promotions__slide {
   display: none;
   position: absolute;
@@ -171,12 +186,7 @@ p {
   border-radius: 100%;
   cursor: pointer;
 }
-.promotions__slider-switch--1::after,
-.promotions__slider-switch--2::after,
-.promotions__slider-switch--3::after,
-.promotions__slider-switch--4::after,
-.promotions__slider-switch--5::after,
-.promotions__slider-switch--6::after {
+.promotions__slider-switch::after {
   content: "";
   display: none;
   position: absolute;
@@ -188,22 +198,6 @@ p {
   border: 1px solid #ffffff;
   border-radius: 100%;
   cursor: pointer;
-}
-.slide_1:checked ~ .promotions__slider-list .autochemistry,
-.slide_2:checked ~ .promotions__slider-list .tires,
-.slide_3:checked ~ .promotions__slider-list .instruments,
-.slide_4:checked ~ .promotions__slider-list .spares,
-.slide_5:checked ~ .promotions__slider-list .car-electronics,
-.slide_6:checked ~ .promotions__slider-list .accessories {
-  display: block;
-}
-.slide_1:checked ~ .promotions__slider-switchers .promotions__slider-switch--1::after,
-.slide_2:checked ~ .promotions__slider-switchers .promotions__slider-switch--2::after,
-.slide_3:checked ~ .promotions__slider-switchers .promotions__slider-switch--3::after,
-.slide_4:checked ~ .promotions__slider-switchers .promotions__slider-switch--4::after,
-.slide_5:checked ~ .promotions__slider-switchers .promotions__slider-switch--5::after,
-.slide_6:checked ~ .promotions__slider-switchers .promotions__slider-switch--6::after {
-  display: block;
 }
 .promotion__action {
   position: relative;
@@ -267,9 +261,7 @@ p {
   border-radius: 100%;
   cursor: pointer;
 }
-.promotions__action-switch--1::after,
-.promotions__action-switch--2::after,
-.promotions__action-switch--3::after {
+.promotions__action-switch::after {
   content: "";
   display: none;
   position: absolute;
@@ -280,16 +272,6 @@ p {
   background-color: #ff7931;
   border-radius: 100%;
   cursor: pointer;
-}
-.action_1:checked ~ .action .action__item-1,
-.action_2:checked ~ .action .action__item-2,
-.action_3:checked ~ .action .action__item-3 {
-  display: block;
-}
-.action_1:checked ~ .promotions__action-switchers .promotions__action-switch--1::after,
-.action_2:checked ~ .promotions__action-switchers .promotions__action-switch--2::after,
-.action_3:checked ~ .promotions__action-switchers .promotions__action-switch--3::after {
-  display: block;
 }
 .search {
   margin-top: 57px;

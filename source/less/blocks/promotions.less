@@ -13,11 +13,6 @@
   margin-bottom: 25px;
 }
 
-.promotions__slider-control,
-.promotions__action-control {
-  display: none;
-}
-
 .promotions__slide {
   display: none;
 
@@ -75,12 +70,7 @@
   cursor: pointer;
 }
 
-.promotions__slider-switch--1::after,
-.promotions__slider-switch--2::after,
-.promotions__slider-switch--3::after,
-.promotions__slider-switch--4::after,
-.promotions__slider-switch--5::after,
-.promotions__slider-switch--6::after {
+.promotions__slider-switch::after {
   content: "";
 
   display: none;
@@ -98,24 +88,6 @@
   border-radius: 100%;
 
   cursor: pointer;
-}
-
-.slide_1:checked ~ .promotions__slider-list .autochemistry,
-.slide_2:checked ~ .promotions__slider-list .tires,
-.slide_3:checked ~ .promotions__slider-list .instruments,
-.slide_4:checked ~ .promotions__slider-list .spares,
-.slide_5:checked ~ .promotions__slider-list .car-electronics,
-.slide_6:checked ~ .promotions__slider-list .accessories {
-  display: block;
-}
-
-.slide_1:checked ~ .promotions__slider-switchers .promotions__slider-switch--1::after,
-.slide_2:checked ~ .promotions__slider-switchers .promotions__slider-switch--2::after,
-.slide_3:checked ~ .promotions__slider-switchers .promotions__slider-switch--3::after,
-.slide_4:checked ~ .promotions__slider-switchers .promotions__slider-switch--4::after,
-.slide_5:checked ~ .promotions__slider-switchers .promotions__slider-switch--5::after,
-.slide_6:checked ~ .promotions__slider-switchers .promotions__slider-switch--6::after {
-  display: block;
 }
 
 .promotion__action {
@@ -195,9 +167,7 @@
   cursor: pointer;
 }
 
-.promotions__action-switch--1::after,
-.promotions__action-switch--2::after,
-.promotions__action-switch--3::after {
+.promotions__action-switch::after {
   content: "";
 
   display: none;
@@ -215,16 +185,3 @@
 
   cursor: pointer;
 }
-
-.action_1:checked ~ .action .action__item-1,
-.action_2:checked ~ .action .action__item-2,
-.action_3:checked ~ .action .action__item-3 {
-  display: block;
-}
-
-.action_1:checked ~ .promotions__action-switchers .promotions__action-switch--1::after,
-.action_2:checked ~ .promotions__action-switchers .promotions__action-switch--2::after,
-.action_3:checked ~ .promotions__action-switchers .promotions__action-switch--3::after {
-  display: block;
-}
-
