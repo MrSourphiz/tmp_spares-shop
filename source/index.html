@@ -299,19 +299,19 @@
     <section class="search">
       <h2 class="visually-hidden">Поиск по сайту</h2>
       <div class="search__container">
-        <div class="search__top-line">
+        <div class="search__top-line tabs">
           <ul class="tabs__list">
             <li class="tabs__item">
-              <a class="tabs__link" href="#search-vin">Поиск по Vin</a>
+              <a class="tabs__link tabs__link--search tabs__link--active" href="#search-vin">Поиск по Vin</a>
             </li>
             <li class="tabs__item">
-              <a class="tabs__link" href="#search-brand">Поиск по марке</a>
+              <a class="tabs__link tabs__link--search" href="#search-brand">Поиск по марке</a>
             </li>
             <li class="tabs__item">
-              <a class="tabs__link" href="#search-name">Поиск по названию товара</a>
+              <a class="tabs__link tabs__link--search" href="#search-name">Поиск по названию товара</a>
             </li>
             <li class="tabs__item">
-              <a class="tabs__link" href="#search-article">Поиск по артикулу</a>
+              <a class="tabs__link tabs__link--search" href="#search-article">Поиск по артикулу</a>
             </li>
           </ul>
         </div>
@@ -409,26 +409,28 @@
     <section class="popular-items">
       <div class="popular-items__container">
         <h2 class="popular-items__title">Популярные товары</h2>
-        <ul class="tabs__list">
-          <li class="tabs__item">
-            <a class="tabs__link" href="#tabs-spares">запчасти</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#tabs-autochemicals">автохимия</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#tabs-tires">шины и диски</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#tabs-autoelectronics">автоэлектроника</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#tabs-tools">инструменты</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#tabs-accessories">аксессуары и другое</a>
-          </li>
-        </ul>
+        <div class="tabs">
+          <ul class="tabs__list">
+            <li class="tabs__item">
+              <a class="tabs__link tabs__link--active" href="#tabs-spares">запчасти</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-autochemicals">автохимия</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-tires">шины и диски</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-autoelectronics">автоэлектроника</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-tools">инструменты</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-accessories">аксессуары и другое</a>
+            </li>
+          </ul>
+        </div>
         <ul class="popular-items__list">
           <li class="popular-items__item" id="tabs-spares">
             <div class="popular-items__slider">
@@ -567,26 +569,28 @@
     <section class="recently-viewed">
       <div class="recently-viewed__container">
         <h2 class="recently-viewed__title">С этим товаром покупают</h2>
-        <ul class="tabs__list">
-          <li class="tabs__item">
-            <a class="tabs__link" href="#tabs-spares">запчасти</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#tabs-autochemicals">автохимия</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#tabs-tires">шины и диски</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#tabs-autoelectronics">автоэлектроника</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#tabs-tools">инструменты</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#tabs-accessories">аксессуары и другое</a>
-          </li>
-        </ul>
+        <div class="tabs">
+          <ul class="tabs__list">
+            <li class="tabs__item">
+              <a class="tabs__link tabs__link--active" href="#tabs-spares">запчасти</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-autochemicals">автохимия</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-tires">шины и диски</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-autoelectronics">автоэлектроника</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-tools">инструменты</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-accessories">аксессуары и другое</a>
+            </li>
+          </ul>
+        </div>
         <ul class="recently-viewed__list">
             <li class="recently-viewed__item" id="tabs-spares">
               <div class="recently-viewed__slider">
