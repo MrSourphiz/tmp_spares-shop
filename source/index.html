@@ -195,53 +195,89 @@
           <input type="radio" class="slider__control control--3" name="action_control" id="action-3">
 
           <ul class="action slider__list">
-            <li class="action__item slide--1">
-              <div class="action__price">
-                <p class="action__price-new">200</p>
-                <p class="action__price-old">500</p>
+            <li class="action__item card card--action slide--1">
+              <div class="card--action__price">
+                <p class="card--action__price-new">200</p>
+                <p class="card--action__price-old">500</p>
               </div>
-              <img class="action__photo" src="img/" alt="фото товара">
-              <h3 class="action__title">Лампочка mini1...</h3>
-              <div class="action__countdown">
+              <a class="card__overlay" href="#">быстрый просмотр</a>
+              <figure class="card__fig card--action__fig">
+                <picture>
+                  <source type="image/webp" srcset="img/lamp@1x.webp 1x, img/lamp@2x.webp 2x">
+                  <!-- 1х: 232px; 2x: 464px -->
+                  <img src="img/lamp@1x.jpg" srcset="img/lamp@2x.jpg 2x" width="150" height="187" alt="Лампа накаливания">
+                </picture>
+                <figcaption class="card__figcaption card--action__figcaption">Лампочка mini...</figcaption>
+              </figure>
+              <div class="card--action__countdown">
+                <p class="card--action__countdown-text">До конца акции осталось:</p>
                 <ul class="timer">
                   <li class="timer__element timer__element--hours">00</li>
                   <li class="timer__element timer__element--minutes">20</li>
                   <li class="timer__element timer__element--seconds">00</li>
                 </ul>
               </div>
-              <a class="action__link" href="#">Перейти на страницу товара</a>
+              <a class="card__link" href="#">
+                <span class="visually-hidden">
+                  Перейти на страницу товара
+                </span>
+              </a>
             </li>
-            <li class="action__item slide--2">
-              <div class="action__price">
-                <p class="action__price-new">200</p>
-                <p class="action__price-old">500</p>
+            <li class="action__item card card--action slide--2">
+              <div class="card--action__price">
+                <p class="card--action__price-new">200</p>
+                <p class="card--action__price-old">500</p>
               </div>
-              <img class="action__photo" src="img/" alt="фото товара">
-              <h3 class="action__title">Лампочка mini2...</h3>
-              <div class="action__countdown">
+              <a class="card__overlay" href="#">быстрый просмотр</a>
+              <figure class="card__fig card--action__fig">
+                <picture>
+                  <source type="image/webp" srcset="img/lamp@1x.webp 1x, img/lamp@2x.webp 2x">
+                  <!-- 1х: 232px; 2x: 464px -->
+                  <img src="img/lamp@1x.jpg" srcset="img/lamp@2x.jpg 2x" width="150" height="187" alt="Лампа накаливания">
+                </picture>
+                <figcaption class="card__figcaption card--action__figcaption">Лампочка mini...</figcaption>
+              </figure>
+              <div class="card--action__countdown">
+                <p class="card--action__countdown-text">До конца акции осталось:</p>
                 <ul class="timer">
                   <li class="timer__element timer__element--hours">00</li>
                   <li class="timer__element timer__element--minutes">20</li>
                   <li class="timer__element timer__element--seconds">00</li>
                 </ul>
               </div>
-              <a class="action__link" href="#">Перейти на страницу товара</a>
+              <a class="card__link" href="#">
+                <span class="visually-hidden">
+                  Перейти на страницу товара
+                </span>
+              </a>
             </li>
-            <li class="action__item slide--3">
-              <div class="action__price">
-                <p class="action__price-new">200</p>
-                <p class="action__price-old">500</p>
+            <li class="action__item card card--action slide--3">
+              <div class="card--action__price">
+                <p class="card--action__price-new">200</p>
+                <p class="card--action__price-old">500</p>
               </div>
-              <img class="action__photo" src="img/" alt="фото товара">
-              <h3 class="action__title">Лампочка mini3...</h3>
-              <div class="action__countdown">
+              <a class="card__overlay" href="#">быстрый просмотр</a>
+              <figure class="card__fig card--action__fig">
+                <picture>
+                  <source type="image/webp" srcset="img/lamp@1x.webp 1x, img/lamp@2x.webp 2x">
+                  <!-- 1х: 232px; 2x: 464px -->
+                  <img src="img/lamp@1x.jpg" srcset="img/lamp@2x.jpg 2x" width="150" height="187" alt="Лампа накаливания">
+                </picture>
+                <figcaption class="card__figcaption card--action__figcaption">Лампочка mini...</figcaption>
+              </figure>
+              <div class="card--action__countdown">
+                <p class="card--action__countdown-text">До конца акции осталось:</p>
                 <ul class="timer">
                   <li class="timer__element timer__element--hours">00</li>
                   <li class="timer__element timer__element--minutes">20</li>
                   <li class="timer__element timer__element--seconds">00</li>
                 </ul>
               </div>
-              <a class="action__link" href="#">Перейти на страницу товара</a>
+              <a class="card__link" href="#">
+                <span class="visually-hidden">
+                  Перейти на страницу товара
+                </span>
+              </a>
             </li>
           </ul>
 
@@ -400,20 +436,92 @@
               <input type="radio" class="slider__control control--2" name="popular-item-control" id="popular-item-2">
               <input type="radio" class="slider__control control--3" name="popular-item-control" id="popular-item-3">
               <ul class="slider__list">
-                <li class="popular-items__slider-item mobile-card-product slide--1">
-                  <img src="img/" alt="фото товара">
-                  <h3>Ремень</h3>
-                  <p>440 ₽</p>
+                <li class="popular-items__slider-item card card--sale slide--1">
+                  <div class="card__attributes">
+                    <button class="favorite favorite--active" title="Убрать из избранного" type="button">
+                      <span class="visually-hidden">
+                        Убрать из избранного
+                      </span>
+                    </button>
+                    <span class="card__summer" aria-hidden="true"></span>
+                  </div>
+                  <a class="card__overlay" href="#">быстрый просмотр</a>
+                  <figure class="card__fig">
+                    <picture>
+                      <source type="image/webp" srcset="img/tire-2@1x.webp 1x, img/tire-2@2x.webp 2x">
+                      <!-- 1х: 151px; 2x: 302px -->
+                      <img src="img/tire-2@1x.jpg" srcset="img/tire-2@2x.jpg 2x" width="151" height="181" alt="Автомобильное колесо">
+                    </picture>
+                    <figcaption class="card__figcaption">Шина 205/80 R16 104Q Misha RF Power Grum</figcaption>
+                  </figure>
+                  <div class="card__presence card__presence--none">
+                    <div class="card__presence-text">Нет в наличии</div>
+                    <a class="card__presence-link" href="#">Сообщить о поступлении</a>
+                  </div>
+                  <div class="card__price card__price--none"></div>
+                  <a class="card__link" href="#">
+                    <span class="visually-hidden">
+                      Перейти на страницу товара
+                    </span>
+                  </a>
                 </li>
-                <li class="popular-items__slider-item mobile-card-product slide--2">
-                  <img src="img/" alt="фото товара">
-                  <h3>Шина 205/80 R16 104Q Misha RF Power Grum</h3>
-                  <p>11 680 ₽</p>
+                <li class="popular-items__slider-item card card--sale slide--2">
+                  <div class="card__attributes">
+                    <button class="favorite favorite--active" title="Убрать из избранного" type="button">
+                      <span class="visually-hidden">
+                        Убрать из избранного
+                      </span>
+                    </button>
+                    <span class="card__summer" aria-hidden="true"></span>
+                  </div>
+                  <a class="card__overlay" href="#">быстрый просмотр</a>
+                  <figure class="card__fig">
+                    <picture>
+                      <source type="image/webp" srcset="img/tire-2@1x.webp 1x, img/tire-2@2x.webp 2x">
+                      <!-- 1х: 151px; 2x: 302px -->
+                      <img src="img/tire-2@1x.jpg" srcset="img/tire-2@2x.jpg 2x" width="151" height="181" alt="Автомобильное колесо">
+                    </picture>
+                    <figcaption class="card__figcaption">Шина 205/80 R16 104Q Misha RF Power Grum</figcaption>
+                  </figure>
+                  <div class="card__presence card__presence--yes">
+                    <div class="card__presence-text">Нет в наличии</div>
+                    <a class="card__presence-link" href="#">Сообщить о поступлении</a>
+                  </div>
+                  <div class="card__price">11 680 ₽</div>
+                  <a class="card__link" href="#">
+                    <span class="visually-hidden">
+                      Перейти на страницу товара
+                    </span>
+                  </a>
                 </li>
-                <li class="popular-items__slider-item mobile-card-product slide--3">
-                  <img src="img/" alt="фото товара">
-                  <h3>Фара Nokian 2025</h3>
-                  <p>680 ₽</p>
+                <li class="popular-items__slider-item card card--sale slide--3">
+                  <div class="card__attributes">
+                    <button class="favorite" title="Добавить в избранное" type="button">
+                      <span class="visually-hidden">
+                        Убрать из избранного
+                      </span>
+                    </button>
+                    <span class="card__winter" aria-hidden="true"></span>
+                  </div>
+                  <a class="card__overlay" href="#">быстрый просмотр</a>
+                  <figure class="card__fig">
+                    <picture>
+                      <source type="image/webp" srcset="img/tire-2@1x.webp 1x, img/tire-2@2x.webp 2x">
+                      <!-- 1х: 151px; 2x: 302px -->
+                      <img src="img/tire-2@1x.jpg" srcset="img/tire-2@2x.jpg 2x" width="151" height="181" alt="Автомобильное колесо">
+                    </picture>
+                    <figcaption class="card__figcaption">Шина 205/80 R16 104Q Misha RF Power Grum</figcaption>
+                  </figure>
+                  <div class="card__presence card__presence--none">
+                    <div class="card__presence-text">Нет в наличии</div>
+                    <a class="card__presence-link" href="#">Сообщить о поступлении</a>
+                  </div>
+                  <div class="card__price card__price--none"></div>
+                  <a class="card__link" href="#">
+                    <span class="visually-hidden">
+                      Перейти на страницу товара
+                    </span>
+                  </a>
                 </li>
               </ul>
               <ul class="popular-items__switchers slider__switchers">
@@ -486,7 +594,7 @@
                 <input type="radio" class="slider__control control--2" name="recently-viewed-control" id="recently-viewed-2">
                 <input type="radio" class="slider__control control--3" name="recently-viewed-control" id="recently-viewed-3">
                 <ul class="slider__list">
-                  <li class="recently-viewed__slide mobile-card-product slide--1">
+                  <li class="recently-viewed__slide card slide--1">
                     <div class="card__attributes">
                       <button class="favorite favorite--active" title="Убрать из избранного" type="button">
                         <span class="visually-hidden">
@@ -515,7 +623,7 @@
                       </span>
                     </a>
                   </li>
-                  <li class="recently-viewed__slide mobile-card-product slide--2">
+                  <li class="recently-viewed__slide card card--sale slide--2">
                     <div class="card__attributes">
                       <button class="favorite favorite--active" title="Убрать из избранного" type="button">
                         <span class="visually-hidden">
@@ -544,14 +652,14 @@
                       </span>
                     </a>
                   </li>
-                  <li class="recently-viewed__slide mobile-card-product slide--3">
+                  <li class="recently-viewed__slide card card--sale slide--3">
                     <div class="card__attributes">
-                      <button class="favorite favorite--active" title="Убрать из избранного" type="button">
+                      <button class="favorite" title="Добавить в избранное" type="button">
                         <span class="visually-hidden">
                           Убрать из избранного
                         </span>
                       </button>
-                      <span class="card__summer" aria-hidden="true"></span>
+                      <span class="card__winter" aria-hidden="true"></span>
                     </div>
                     <a class="card__overlay" href="#">быстрый просмотр</a>
                     <figure class="card__fig">
