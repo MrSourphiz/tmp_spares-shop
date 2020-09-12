@@ -1,0 +1,21 @@
+.slider__control {
+  display: none;
+}
+
+.control--1:checked ~ .slider__list .slide--1,
+.control--2:checked ~ .slider__list .slide--2,
+.control--3:checked ~ .slider__list .slide--3,
+.control--4:checked ~ .slider__list .slide--4,
+.control--5:checked ~ .slider__list .slide--5,
+.control--6:checked ~ .slider__list .slide--6 {
+  display: block;
+}
+
+.control--1:checked ~ .slider__switchers .switch--1::after,
+.control--2:checked ~ .slider__switchers .switch--2::after,
+.control--3:checked ~ .slider__switchers .switch--3::after,
+.control--4:checked ~ .slider__switchers .switch--4::after,
+.control--5:checked ~ .slider__switchers .switch--5::after,
+.control--6:checked ~ .slider__switchers .switch--6::after {
+  display: block;
+}

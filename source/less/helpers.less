@@ -1,9 +1,9 @@
 body {
-  min-width: 320px;
+  min-width: @mobile-width;
 
-  font-family: "Arial", sans-serif;
+  font-family: @main-font;
   font-style: normal;
-  color: #000000;
+  color: @text-color;
 
   margin: 0;
   padding: 0;
@@ -34,5 +34,21 @@ p {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  word-wrap: normal;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.menu-opened .main,
+.menu-opened .page-header {
+  position: static;
+  transform: translateX(242px);
 }

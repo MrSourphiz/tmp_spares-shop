@@ -1,0 +1,473 @@
+/*ITEM CARD*/
+.card {
+  position: relative;
+
+  width: 268px;
+  height: 403px;
+
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+
+  margin-bottom: 79px;
+}
+
+.card:hover,
+.card:focus {
+  box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+  cursor: pointer;
+}
+
+.card:hover .card__overlay,
+.card:focus .card__overlay {
+  display: block;
+}
+
+.card--sale::before {
+  content: "sale";
+
+  position: absolute;
+  top: 26px;
+  left: -28px;
+
+  width: 79px;
+  height: 15px;
+
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  background: linear-gradient(90deg, rgba(137, 29, 208, 1) 0%, rgba(251, 139, 60, 1) 100%);
+
+  transform: rotate(-90deg);
+}
+
+.card__overlay {
+  display: none;
+
+  position: absolute;
+  top: 122px;
+  right: 20px;
+  left: 20px;
+
+  z-index: 10;
+
+  text-align: center;
+  color: #5f6063;
+
+  background-color: rgba(255, 255, 255, 0.9);
+
+  padding: 18px 10px;
+
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.card__overlay:hover {
+  color: rgba(95, 96, 99, 0.8);
+  background-color: #ffffff;
+}
+
+.card__overlay:active {
+  opacity: 0.8;
+}
+
+.card__attributes {
+  height: 50px;
+
+  font-size: 0;
+  text-align: right;
+
+  padding-top: 18px;
+  padding-right: 20px;
+}
+
+.favorite {
+  position: relative;
+
+  display: inline-block;
+  width: 27px;
+  height: 25px;
+
+  z-index: 10;
+
+  vertical-align: middle;
+
+  background-color: transparent;
+  background-image: url("../img/favorites.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  padding: 0;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.favorite:hover {
+  opacity: 0.6;
+}
+
+.favorite:active {
+  opacity: 0.3;
+}
+
+.favorite--active,
+.favorite:active {
+  background-image: url("../img/favorites-active.svg");
+}
+
+.favorite--active:active {
+  background-image: url("../img/favorites.svg");
+}
+
+.card__summer,
+.card__winter {
+  display: inline-block;
+
+  width: 28px;
+  height: 31px;
+
+  vertical-align: middle;
+
+  background-repeat: no-repeat;
+  background-image: url("../img/snowflake.svg");
+
+  margin-left: 20px;
+}
+
+.card__summer {
+  width: 31px;
+  background-image: url("../img/sun.svg");
+}
+
+.card__fig {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  align-items: center;
+  text-align: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+.card__figcaption,
+.card__price {
+  max-width: 100%;
+
+  text-align: center;
+
+  padding-top: 24px;
+  margin-top: auto;
+}
+
+.card__price {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #48494d;
+
+  padding-bottom: 26px;
+}
+
+.card__presence {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+
+  width: 60px;
+  height: 40px;
+
+  border-radius: 10px 0 0 0;
+  background-color: #ff7931;
+}
+
+.card__presence::before {
+  content: "";
+
+  display: block;
+
+  position: absolute;
+  right: 18px;
+  bottom: 6px;
+
+  width: 22px;
+  height: 26px;
+
+  background-image: url("../img/product-card.svg");
+  background-repeat: no-repeat;
+}
+
+.card__presence-text {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: lowercase;
+  letter-spacing: 0.6px;
+
+  padding-bottom: 7px;
+}
+
+.card__presence-link {
+  position: relative;
+
+  z-index: 10;
+
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: #ff7931;
+}
+
+.card__presence-link::before {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: 0;
+
+  border: 1px solid rgba(255, 121, 49, 0.2);
+}
+
+.card__presence-link:hover::before {
+  border: 1px solid rgba(255, 121, 49, 0.6);
+}
+
+.card__presence-link:active::before {
+  border: 1px solid #ff7931;
+}
+
+.card__presence--none {
+  position: static;
+
+  width: auto;
+  height: auto;
+
+  text-align: center;
+
+  background-color: transparent;
+
+  padding-top: 16px;
+  padding-bottom: 25px;
+}
+
+.card__presence--none::before {
+  content: none;
+}
+
+.card__presence--yes .card__presence-text,
+.card__presence--yes .card__presence-link {
+  display: none;
+}
+
+.card__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+/*ACTION CARD*/
+
+.card--action {
+  height: 395px;
+}
+
+.card--action::before {
+  content: "АКЦИЯ";
+
+  position: absolute;
+  top: 26px;
+  left: -28px;
+
+  width: 79px;
+  height: 15px;
+
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  background: linear-gradient(90deg, rgba(137, 29, 208, 1) 0%, rgba(251, 139, 60, 1) 100%);
+
+  transform: rotate(-90deg);
+}
+
+.card--action__price {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.card--action__price-new {
+  padding-bottom: 5px;
+  font-size: 27px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #ff7931;
+}
+
+.card--action__price-new::after,
+.card--action__price-old::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+
+  background-repeat: no-repeat;
+  background-image: url("../img/rouble-new.svg");
+
+  margin-left: 7px;
+}
+
+.card--action__price-old {
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 20px;
+  line-height: 16px;
+  color: #a8a8a8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/diagonal.svg");
+}
+
+.card--action__price-old::after {
+  width: 12px;
+  height: 13px;
+  background-image: url("../img/rouble-old.svg");
+}
+
+.card--action__fig {
+  margin-top: 35px;
+}
+
+.card--action__figcaption {
+  font-size: 23px;
+  line-height: 28px;
+  font-weight: 700;
+
+  padding-top: 20px;
+}
+
+.card--action__countdown {
+  width: 100%;
+  height: 81px;
+
+  padding-top: 18px;
+
+  margin-top: 22px;
+
+  background-color: #f0f0f4;
+}
+
+.card--action__countdown-text {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  color: #48494d;
+}
+
+.timer {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 102px;
+
+  padding-top: 15px;
+  padding-left: 20px;
+
+  margin: 0 auto;
+}
+
+.timer::before {
+  content: "";
+
+  display: block;
+
+  position: absolute;
+  top: 14px;
+  left: -20px;
+
+  width: 28px;
+  height: 28px;
+
+  background-image: url("../img/timer.svg");
+}
+
+.timer__element {
+  position: relative;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  color: #48494d;
+}
+
+.timer__element::after {
+  content: ":";
+
+  position: absolute;
+  top: 0;
+  right: -13px;
+}
+
+.timer__element:last-child::after {
+  display: none;
+}
+
+.timer__element--hours::before {
+  content: "часов";
+
+  position: absolute;
+  top: 20px;
+  left: 0;
+
+  font-size: 10px;
+  line-height: 12px;
+  color: #c4c4c4;
+}
+
+.timer__element--minutes::before {
+  content: "минут";
+
+  position: absolute;
+  top: 20px;
+  left: 0;
+
+  font-size: 10px;
+  line-height: 12px;
+  color: #c4c4c4;
+}
+
+.timer__element--seconds::before {
+  content: "секунд";
+
+  position: absolute;
+  top: 20px;
+  left: 0;
+
+  font-size: 10px;
+  line-height: 12px;
+  color: #c4c4c4;
+}
+
