@@ -1,0 +1,94 @@
+.custom-select {
+  display: inline-block;
+  width: 160px;
+  height: 34px;
+  line-height: 30px;
+  position: relative;
+}
+
+.custom-select__input {
+  display: none;
+}
+
+.custom-select__placeholder {
+  position: absolute;
+  display: block;
+  top: 0;
+  padding-left: 10px;
+}
+
+.custom-select input[name="city-select"]:not(:checked) ~ .custom-select__placeholder {
+  color: black;
+  background: white;
+}
+
+.custom-select input[name="city-select"]:checked ~ .custom-select__placeholder {
+  background: transparent;
+  color: transparent;
+  z-index: 2;
+}
+
+.custom-select input[name="sorting-type"]:not(:checked) ~ .custom-select__placeholder {
+  color: black;
+  background: white;
+}
+
+.custom-select input[name="sorting-type"]:checked ~ .custom-select__placeholder {
+  background: transparent;
+  color: transparent;
+  z-index: 2;
+}
+
+.custom-select__input--select:disabled ~ .custom-select__items .custom-select__placeholder {
+  background: #eeeeee;
+}
+
+.custom-select__items {
+  display: block;
+  min-height: 30px;
+  position: absolute;
+  border: 2px solid #dddddd;
+  overflow: hidden;
+  width: 160px;
+  cursor: pointer;
+}
+
+.custom-select__input--select:not(:checked) ~ .custom-select__items {
+  height: 30px;
+}
+
+.custom-select__items label {
+  border-top: 2px solid #dddddd;
+  display: none;
+  padding-left: 10px;
+  background: white;
+}
+
+.custom-select__items label:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+
+.custom-select__input--select:checked ~ .custom-select__items {
+  padding-top: 30px;
+}
+
+.custom-select__input--select:checked ~ .custom-select__items label {
+  display: block;
+}
+
+.custom-select__items input:checked + label {
+  display: block;
+  border: none;
+  background: white;
+}
+
+.custom-select__input--select:checked ~ .bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
