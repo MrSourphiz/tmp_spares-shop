@@ -171,7 +171,7 @@
           </ul>
         </li>
 
-        <li class="top-filters__item city-select">
+        <li class="top-filters__item top-filters__city-select">
           <label for="select" class="custom-select">
             <input class="custom-select__input" type="radio" name="city-select" value="not_changed" id="bg">
             <input class="custom-select__input custom-select__input--select" type="radio" name="city-select" value="not_changed" id="select">
@@ -192,7 +192,7 @@
           </label>
         </li>
 
-        <li class="top-filters__item">
+        <li class="top-filters__item top-filters__sorting-type--wrap">
           <div class="top-filters__sorting-type">
             <label for="sorting-type-select" class="custom-select">
               <input class="custom-select__input" type="radio" name="sorting-type" value="not_changed" id="sorting-type-bg">
@@ -207,7 +207,7 @@
                 <label for="low-price">По убыванию цены</label>
                 <input class="custom-select__input" type="radio" name="sorting-type" value="high-price" id="high-price">
                 <label for="high-price">По возрастанию цены</label>
-                <span class="custom-select__placeholder" id="text">Выберите город:</span>
+                <span class="custom-select__placeholder" id="text">Тип сортировки:</span>
               </div>
             </label>
           </div>
@@ -228,7 +228,7 @@
           </div>
 
           <div class="sorting__mobile">
-            <button type="button">Фильтры</button>
+            <button class="sorting__mobile-button" type="button">Фильтры</button>
           </div>
         </li>
       </ul>

@@ -6,6 +6,16 @@
   margin: 0 auto;
 }
 
+.top-filters__title {
+  font-size: 20px;
+  line-height: 23px;
+  font-style: normal;
+  font-weight: bold;
+  color: #48494d;
+
+  padding-left: 16px;
+}
+
 .top-filters__list {
   display: flex;
   flex-direction: column-reverse;
@@ -63,39 +73,87 @@
   border-radius: 50px;
 }
 
-.custom-select__title {
-  font-size: 14px;
-  line-height: 17px;
-  color: #48494d;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  padding-left: 15px;
-  padding-right: 31px;
-  background-color: transparent;
+.top-filters__city-select {
+  position: relative;
+  z-index: 100;
+
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
-.custom-select__title:active,
-.custom-select__title:focus {
-  background-color: transparent;
-  color: #48494d;
-  opacity: 1;
-}
-
-.custom-select__title::after {
+.top-filters__city-select::after {
   content: "";
+
   position: absolute;
-  width: 12px;
-  height: 7.4px;
   top: 10px;
-  right: 0;
-  background-image: url("../img/arrow-grey-bottom.svg");
+  right: -22px;
+
+  width: 9px;
+  height: 9px;
+
+  border-bottom: 1px solid rgba(72, 73, 77, 0.3);
+  border-right: 1px solid rgba(72, 73, 77, 0.3);
+
+  transform: rotate(45deg);
 }
 
-.select-opened .custom-select__title::after {
-  background-image: url("../img/arrow-grey-top.svg");
+.top-filters__sorting-type--wrap {
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.top-filters__sorting-type {
+  position: relative;
+  z-index: 150;
+
+  margin-left: 42px;
+  margin-right: 34px;
+}
+
+.top-filters__sorting-type::before {
+  content: "";
+  display: block;
+
+  position: absolute;
+  top: 10px;
+  left: -20px;
+
+  width: 19px;
+  height: 13px;
+
+  background-image: url("../img/arrows-sort.svg");
+  background-repeat: no-repeat;
 }
 
 .sorting__view {
   display: none;
+}
+
+.sorting__mobile-button {
+  position: relative;
+  font-size: 15px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: bold;
+  color: #48494d;
+
+  background-color: #ffffff;
+  padding: 0;
+  border: none;
+}
+
+.sorting__mobile-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 1px;
+  left: -20px;
+  background-image: url("../img/filter.svg");
+  background-repeat: no-repeat;
 }

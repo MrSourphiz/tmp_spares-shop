@@ -1,6 +1,6 @@
 .custom-select {
   display: inline-block;
-  width: 160px;
+  width: 150px;
   height: 34px;
   line-height: 30px;
   position: relative;
@@ -11,10 +11,17 @@
 }
 
 .custom-select__placeholder {
-  position: absolute;
   display: block;
+
+  position: absolute;
   top: 0;
+
+  width: 150px;
+  min-height: 17px;
+
   padding-left: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 .custom-select input[name="city-select"]:not(:checked) ~ .custom-select__placeholder {
@@ -44,24 +51,37 @@
 }
 
 .custom-select__items {
-  display: block;
-  min-height: 30px;
   position: absolute;
-  border: 2px solid #dddddd;
+  display: block;
+  width: 150px;
+  min-height: 17px;
+
+  font-size: 15px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: bold;
+
+  color: #48494d;
+
+  padding-top: 9px;
+  padding-bottom: 9px;
+
   overflow: hidden;
-  width: 160px;
+
   cursor: pointer;
 }
 
 .custom-select__input--select:not(:checked) ~ .custom-select__items {
-  height: 30px;
+  height: 34px;
 }
 
 .custom-select__items label {
-  border-top: 2px solid #dddddd;
   display: none;
-  padding-left: 10px;
+
   background: white;
+
+  padding-left: 10px;
+  border-top: 2px solid #dddddd;
 }
 
 .custom-select__items label:hover {
@@ -79,8 +99,8 @@
 
 .custom-select__items input:checked + label {
   display: block;
-  border: none;
   background: white;
+  border: none;
 }
 
 .custom-select__input--select:checked ~ .bg {
@@ -92,3 +112,14 @@
   z-index: 0;
   background: rgba(0, 0, 0, 0.4);
 }
+
+.top-filters__city-select .custom-select,
+.top-filters__city-select .custom-select__items,
+.top-filters__city-select .custom-select__placeholder {
+  width: 180px;
+  text-align: center;
+  color: #ff7931;
+
+  padding-left: 0;
+}
+
