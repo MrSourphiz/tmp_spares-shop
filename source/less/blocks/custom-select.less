@@ -1,0 +1,125 @@
+.custom-select {
+  display: inline-block;
+  width: 150px;
+  height: 34px;
+  line-height: 30px;
+  position: relative;
+}
+
+.custom-select__input {
+  display: none;
+}
+
+.custom-select__placeholder {
+  display: block;
+
+  position: absolute;
+  top: 0;
+
+  width: 150px;
+  min-height: 17px;
+
+  padding-left: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.custom-select input[name="city-select"]:not(:checked) ~ .custom-select__placeholder {
+  color: black;
+  background: white;
+}
+
+.custom-select input[name="city-select"]:checked ~ .custom-select__placeholder {
+  background: transparent;
+  color: transparent;
+  z-index: 2;
+}
+
+.custom-select input[name="sorting-type"]:not(:checked) ~ .custom-select__placeholder {
+  color: black;
+  background: white;
+}
+
+.custom-select input[name="sorting-type"]:checked ~ .custom-select__placeholder {
+  background: transparent;
+  color: transparent;
+  z-index: 2;
+}
+
+.custom-select__input--select:disabled ~ .custom-select__items .custom-select__placeholder {
+  background: #eeeeee;
+}
+
+.custom-select__items {
+  position: absolute;
+  display: block;
+  width: 150px;
+  min-height: 17px;
+
+  font-size: 15px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: bold;
+
+  color: #48494d;
+
+  padding-top: 9px;
+  padding-bottom: 9px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+.custom-select__input--select:not(:checked) ~ .custom-select__items {
+  height: 34px;
+}
+
+.custom-select__items label {
+  display: none;
+
+  background: white;
+
+  padding-left: 10px;
+  border-top: 2px solid #dddddd;
+}
+
+.custom-select__items label:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+
+.custom-select__input--select:checked ~ .custom-select__items {
+  padding-top: 30px;
+}
+
+.custom-select__input--select:checked ~ .custom-select__items label {
+  display: block;
+}
+
+.custom-select__items input:checked + label {
+  display: block;
+  background: white;
+  border: none;
+}
+
+.custom-select__input--select:checked ~ .bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.top-filters__city-select .custom-select,
+.top-filters__city-select .custom-select__items,
+.top-filters__city-select .custom-select__placeholder {
+  width: 180px;
+  text-align: center;
+  color: #ff7931;
+
+  padding-left: 0;
+}
+

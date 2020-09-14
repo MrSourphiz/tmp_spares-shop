@@ -1,0 +1,20 @@
+.catalog {
+  width: 270px;
+
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.catalog__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__item {
+  margin-bottom: 30px;
+}
+
+.catalog__list--mobile .catalog__item:nth-child(n+6) {
+  display: none;
+}

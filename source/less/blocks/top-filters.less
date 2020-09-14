@@ -1,0 +1,159 @@
+.top-filters {
+  width: 320px;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0 auto;
+}
+
+.top-filters__title {
+  font-size: 20px;
+  line-height: 23px;
+  font-style: normal;
+  font-weight: bold;
+  color: #48494d;
+
+  padding-left: 16px;
+}
+
+.top-filters__list {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.top-filters__item {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.top-filters__item:last-child {
+  margin-bottom: 0;
+}
+
+.offers {
+  overflow-x: auto;
+}
+
+.offers__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.offers__item {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.offers__item:last-child {
+  margin-right: 0;
+}
+
+.offers__link {
+  display: block;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  font-weight: normal;
+
+  color: #48494d;
+
+  opacity: 0.7;
+
+  background-color: #f4f4f6;
+
+  padding-top: 4px;
+  padding-right: 22px;
+  padding-bottom: 4px;
+  padding-left: 22px;
+
+  border-radius: 50px;
+}
+
+.top-filters__city-select {
+  position: relative;
+  z-index: 100;
+
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.top-filters__city-select::after {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  right: -22px;
+
+  width: 9px;
+  height: 9px;
+
+  border-bottom: 1px solid rgba(72, 73, 77, 0.3);
+  border-right: 1px solid rgba(72, 73, 77, 0.3);
+
+  transform: rotate(45deg);
+}
+
+.top-filters__sorting-type--wrap {
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.top-filters__sorting-type {
+  position: relative;
+  z-index: 150;
+
+  margin-left: 42px;
+  margin-right: 34px;
+}
+
+.top-filters__sorting-type::before {
+  content: "";
+  display: block;
+
+  position: absolute;
+  top: 10px;
+  left: -20px;
+
+  width: 19px;
+  height: 13px;
+
+  background-image: url("../img/arrows-sort.svg");
+  background-repeat: no-repeat;
+}
+
+.sorting__view {
+  display: none;
+}
+
+.sorting__mobile-button {
+  position: relative;
+  font-size: 15px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: bold;
+  color: #48494d;
+
+  background-color: #ffffff;
+  padding: 0;
+  border: none;
+}
+
+.sorting__mobile-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 1px;
+  left: -20px;
+  background-image: url("../img/filter.svg");
+  background-repeat: no-repeat;
+}
