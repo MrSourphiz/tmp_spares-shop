@@ -236,20 +236,27 @@
 
     <div class="main__content-wrap">
       <section class="filter">
-        <h2 class="visually-hidden">Боковой фильтр товаров</h2>
+        <div class="filter__header">
+          <h2 class="filter__title">Фильтры</h2>
+          <button class="filter__head-button" type="button">
+            <span class="visually-hidden">
+              Закрыть фильтр
+            </span>
+          </button>
+        </div>
         <form class="filter__form" method="get">
           <ul class="filter__type-list">
             <li>
-              <a class="tabs__link" href="#filter-parameters">Параметры</a>
+              <a class="filter__type-link" href="#filter-parameters">Параметры</a>
             </li>
             <li>
-              <a class="tabs__link" href="#filter-brand">по марке</a>
+              <a class="filter__type-link filter__type-link--active" href="#filter-brand">По марке</a>
             </li>
           </ul>
           <div class="filter__parameters">
-            <fieldset>
-              <legend>Сезонность</legend>
-              <button type="button">Сезонность</button>
+            <fieldset class="filter__seasonality filter__seasonality--mobile">
+              <legend class="filter__seasonality-title">Сезонность</legend>
+              <button class="filter__seasonality-button" type="button">Сезонность</button>
               <ul>
                 <li>
                   <label>Зимние</label>

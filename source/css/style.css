@@ -1012,6 +1012,88 @@ p {
   background-image: url("../img/filter.svg");
   background-repeat: no-repeat;
 }
+.filter {
+  width: 320px;
+  margin: 0 auto;
+}
+.filter__header {
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 9px;
+}
+.filter__title {
+  font-size: 15px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: bold;
+  color: #48494d;
+  text-align: center;
+  margin: 0;
+}
+.filter__head-button {
+  position: absolute;
+  top: 23px;
+  left: 16px;
+  width: 14px;
+  height: 10px;
+  background-color: #ffffff;
+  background-image: url("../img/arrow-back.svg");
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+.filter__type-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 288px;
+  border: 1px solid #c4c4c4;
+  margin: 0 auto;
+  margin-top: 9px;
+  margin-bottom: 15px;
+}
+.filter__type-link {
+  display: block;
+  width: 144px;
+  height: 17px;
+  font-size: 15px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  color: #48494d;
+}
+.filter__type-link:active {
+  background-color: #ff7931;
+  color: #ffffff;
+}
+.filter__type-link--active {
+  background-color: #ff7931;
+  color: #ffffff;
+}
+.filter__parameters {
+  padding-top: 15px;
+}
+.filter__seasonality {
+  border: none;
+}
+.filter__seasonality--mobile .filter__seasonality-button {
+  display: none;
+}
+.filter__seasonality-title {
+  font-size: 16px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: bold;
+  color: #48494d;
+  padding: 0;
+}
 .promotions {
   margin-top: 15px;
 }
