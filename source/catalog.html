@@ -250,26 +250,36 @@
               <a class="filter__type-link" href="#filter-parameters">Параметры</a>
             </li>
             <li>
-              <a class="filter__type-link filter__type-link--active" href="#filter-brand">По марке</a>
+              <a class="filter__type-link filter__type-brands--active" href="#filter-brand">По марке</a>
             </li>
           </ul>
-          <div class="filter__parameters">
+          <div class="filter__parameters" id="#filter-parameters">
             <fieldset class="filter__seasonality filter__seasonality--mobile">
               <legend class="filter__seasonality-title">Сезонность</legend>
               <button class="filter__seasonality-button" type="button">Сезонность</button>
-              <ul>
-                <li>
-                  <label>Зимние</label>
-                  <input type="checkbox">
+              <ul class="filter__seasonality-list">
+                <li class="filter__seasonality-item">
+                  <button class="filter__seasonality-info-button" type="button">
+                    <span class="visually-hidden">
+                      Справка
+                    </span>
+                  </button>
+                  <input class="visually-hidden filter__seasonality-checkbox" type="checkbox" name="seasonality-parameters" id="winter-parameters">
+                  <label class="filter__seasonality-label" for="winter-parameters">Зимние</label>
                 </li>
-                <li>
-                  <label>Летние</label>
-                  <input type="checkbox">
+                <li class="filter__seasonality-item">
+                  <button class="filter__seasonality-info-button" type="button">
+                    <span class="visually-hidden">
+                      Справка
+                    </span>
+                  </button>
+                  <input class="visually-hidden filter__seasonality-checkbox" type="checkbox" name="seasonality-parameters" id="summer-parameters" checked>
+                  <label class="filter__seasonality-label" for="summer-parameters">Летние</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter__tyres">
               <legend>Тип шин</legend>
               <button type="button">Тип шин</button>
               <ul>
@@ -445,17 +455,27 @@
             </fieldset>
           </div>
           <div class="filter__brands">
-            <fieldset>
-              <legend>Сезонность</legend>
-              <button type="button">Сезонность</button>
-              <ul>
-                <li>
-                  <label>Летние</label>
-                  <input type="checkbox">
+            <fieldset class="filter__seasonality filter__seasonality--mobile">
+              <legend class="filter__seasonality-title">Сезонность</legend>
+              <button class="filter__seasonality-button" type="button">Сезонность</button>
+              <ul class="filter__seasonality-list">
+                <li class="filter__seasonality-item">
+                  <button class="filter__seasonality-info-button" type="button">
+                    <span class="visually-hidden">
+                      Справка
+                    </span>
+                  </button>
+                  <input class="visually-hidden filter__seasonality-checkbox" type="checkbox" name="seasonality-brands" id="winter-brands">
+                  <label class="filter__seasonality-label" for="winter-brands">Зимние</label>
                 </li>
-                <li>
-                  <label>Зимние</label>
-                  <input type="checkbox">
+                <li class="filter__seasonality-item">
+                  <button class="filter__seasonality-info-button" type="button">
+                    <span class="visually-hidden">
+                      Справка
+                    </span>
+                  </button>
+                  <input class="visually-hidden filter__seasonality-checkbox" type="checkbox" name="seasonality-brands" id="summer-brands" checked>
+                  <label class="filter__seasonality-label" for="summer-brands">Летние</label>
                 </li>
               </ul>
             </fieldset>

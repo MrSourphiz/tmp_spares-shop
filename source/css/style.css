@@ -1073,15 +1073,26 @@ p {
   background-color: #ff7931;
   color: #ffffff;
 }
-.filter__type-link--active {
+.filter__type-parameters--active,
+.filter__type-brands--active {
   background-color: #ff7931;
   color: #ffffff;
 }
-.filter__parameters {
+.filter__parameters,
+.filter__brands {
   padding-top: 15px;
 }
-.filter__seasonality {
+.filter__parameters {
+  display: none;
+}
+.filter__parameters fieldset,
+.filter__brands fieldset {
   border: none;
+  padding: 0;
+  margin: 0;
+}
+.filter__seasonality {
+  margin-bottom: 15px;
 }
 .filter__seasonality--mobile .filter__seasonality-button {
   display: none;
@@ -1093,6 +1104,71 @@ p {
   font-weight: bold;
   color: #48494d;
   padding: 0;
+  margin-left: 26px;
+}
+.filter__seasonality-item {
+  padding-top: 15px;
+  padding-bottom: 6px;
+  padding-left: 26px;
+  border-bottom: 1px solid #c4c4c4;
+}
+.filter__seasonality-info-button {
+  width: 17px;
+  height: 17px;
+  background-color: #ffffff;
+  background-image: url("../img/question-mark.svg");
+  border: none;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.filter__seasonality-label {
+  position: relative;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 17px;
+  color: #000000;
+  cursor: pointer;
+}
+.filter__seasonality-label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -173px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c4c4c4;
+  cursor: pointer;
+}
+.filter__seasonality-item:first-child .filter__seasonality-label::before {
+  right: -169px;
+}
+.filter__seasonality-label::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: -168px;
+  width: 4px;
+  height: 8px;
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.filter__seasonality-label:hover::before,
+.filter__seasonality-label:focus::before {
+  border-color: #ff7931;
+}
+.filter__seasonality-item:first-child .filter__seasonality-label::after {
+  right: -164px;
+}
+.filter__seasonality-checkbox:checked + .filter__seasonality-label::before {
+  background-color: #ff7931;
+  border-color: #ff7931;
+}
+.filter__seasonality-checkbox:checked + .filter__seasonality-label::after {
+  display: block;
 }
 .promotions {
   margin-top: 15px;
