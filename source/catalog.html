@@ -8,7 +8,7 @@
   <title>Интернет-магазин Автозапчастей: Каталог товаров</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="catalog-body">
   <header class="page-header">
     <div class="page-header__wrap">
       <div class="page-header__top-line">
@@ -244,375 +244,394 @@
             </span>
           </button>
         </div>
-        <form class="filter__form" method="get">
+        <form class="filter__form filter__form--mobile filter__type-brands--active" method="get">
           <ul class="filter__type-list">
-            <li>
-              <a class="filter__type-link" href="#filter-parameters">Параметры</a>
+            <li class="filter__type-item">
+              <a class="filter__type-link filter__type-parameters" href="#filter-parameters">Параметры</a>
             </li>
-            <li>
-              <a class="filter__type-link filter__type-brands--active" href="#filter-brand">По марке</a>
+            <li class="filter__type-item">
+              <a class="filter__type-link filter__type-brands filter__type-link--active" href="#filter-brand">По марке</a>
             </li>
           </ul>
           <div class="filter__parameters" id="#filter-parameters">
-            <fieldset class="filter__seasonality filter__seasonality--mobile">
-              <legend class="filter__seasonality-title">Сезонность</legend>
-              <button class="filter__seasonality-button" type="button">Сезонность</button>
+            <fieldset class="filter__seasonality">
+              <legend class="filter__filedset-title">Сезонность</legend>
+              <button class="filter__open-button" type="button">Сезонность</button>
               <ul class="filter__seasonality-list">
-                <li class="filter__seasonality-item">
-                  <button class="filter__seasonality-info-button" type="button">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <button class="filter__info-button" type="button">
                     <span class="visually-hidden">
                       Справка
                     </span>
                   </button>
-                  <input class="visually-hidden filter__seasonality-checkbox" type="checkbox" name="seasonality-parameters" id="winter-parameters">
-                  <label class="filter__seasonality-label" for="winter-parameters">Зимние</label>
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="seasonality-parameters" id="winter-parameters">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="winter-parameters">Зимние</label>
                 </li>
-                <li class="filter__seasonality-item">
-                  <button class="filter__seasonality-info-button" type="button">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <button class="filter__info-button" type="button">
                     <span class="visually-hidden">
                       Справка
                     </span>
                   </button>
-                  <input class="visually-hidden filter__seasonality-checkbox" type="checkbox" name="seasonality-parameters" id="summer-parameters" checked>
-                  <label class="filter__seasonality-label" for="summer-parameters">Летние</label>
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="seasonality-parameters" id="summer-parameters" checked>
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="summer-parameters">Летние</label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset class="filter__tyres">
-              <legend>Тип шин</legend>
-              <button type="button">Тип шин</button>
+              <legend class="filter__filedset-title">Тип шин</legend>
+              <button class="filter__open-button" type="button">Тип шин</button>
               <ul>
-                <li>
-                  <label>Все</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <button class="filter__info-button" type="button">
+                    <span class="visually-hidden">
+                      Справка
+                    </span>
+                  </button>
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="tyres-type" id="all">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="all">Все</label>
                 </li>
-                <li>
-                  <label>Шипованные</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <button class="filter__info-button" type="button">
+                    <span class="visually-hidden">
+                      Справка
+                    </span>
+                  </button>
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="tyres-type" id="studded">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="studded">Шипованные</label>
                 </li>
-                <li>
-                  <label>Нешипованные</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <button class="filter__info-button" type="button">
+                    <span class="visually-hidden">
+                      Справка
+                    </span>
+                  </button>
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="tyres-type" id="studless">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="studless">Нешипованные</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset class="left-filter__price">
-              <legend>Цена</legend>
-              <button type="button">Цена</button>
+            <fieldset class="filter__price">
+              <legend class="filter__filedset-title">Цена</legend>
+              <button class="filter__open-button" type="button">Цена</button>
 
-              <div class="left-filter__range-contols">
-                <div class="left-filter__scale">
-                  <div class="left-filter__bar"></div>
+              <div class="filter__range-contols">
+                <div class="filter__scale">
+                  <div class="filter__bar"></div>
                 </div>
-                <div class="left-filter__range-toggle left-filter__range-toggle--min"></div>
-                <div class="left-filter__range-toggle left-filter__range-toggle--max"></div>
+                <div class="filter__range-toggle filter__range-toggle--min"></div>
+                <div class="filter__range-toggle filter__range-toggle--max"></div>
               </div>
 
-              <div class="left-filter__price-controls">
-                <div class="left-filter__row left-filter__row--input left-filter__min-price">
-                  <label for="min-price-mask">от</label>
-                  <input type="text" name="min-price" value="2000" pattern="^[ 0-9]+$" id="min-price-mask">
+              <div class="filter__price-controls">
+                <div class="filter__row filter__row--input filter__min-price">
+                  <label class="filter__range-label" for="min-price-mask">от</label>
+                  <input class="filter__range-input input-min-price" type="text" name="min-price" placeholder="2000" value="2000" pattern="^[ 0-9]+$" id="min-price-mask">
                 </div>
-                <div class="left-filter__row left-filter__row--input left-filter__max-price">
-                  <label for="max-price-mask">до</label>
-                  <input type="text" name="max-price" value="12000" pattern="^[ 0-9]+$" id="max-price-mask">
+                <div class="filter__row filter__row--input filter__max-price">
+                  <label class="filter__range-label" for="max-price-mask">до</label>
+                  <input class="filter__range-input input-max-price" type="text" name="max-price" placeholder="12000" value="12000" pattern="^[ 0-9]+$" id="max-price-mask">
                 </div>
               </div>
             </fieldset>
 
             <fieldset>
-              <legend>Диаметр</legend>
-              <button type="button">Диаметр</button>
-              <select>
+              <legend class="filter__filedset-title">Диаметр</legend>
+              <button class="filter__open-button" type="button">Диаметр</button>
+              <select class="filter__filedset-select">
                   <option>10</option>
               </select>
             </fieldset>
 
             <fieldset>
-              <legend>Профиль</legend>
-              <button type="button">Профиль</button>
-              <select>
+              <legend class="filter__filedset-title">Профиль</legend>
+              <button class="filter__open-button" type="button">Профиль</button>
+              <select class="filter__filedset-select">
                   <option>10</option>
               </select>
             </fieldset>
 
             <fieldset>
-              <legend>Ширина</legend>
-              <button type="button">Ширина</button>
-              <select>
+              <legend class="filter__filedset-title">Ширина</legend>
+              <button class="filter__open-button" type="button">Ширина</button>
+              <select class="filter__filedset-select">
                   <option>10</option>
               </select>
             </fieldset>
 
             <fieldset>
-              <legend>Бренд</legend>
-              <button type="button">Бренд</button>
-              <input type="text" placeholder="Введите бренд шины">
+              <legend class="filter__filedset-title">Бренд</legend>
+              <button class="filter__open-button" type="button">Бренд</button>
+              <input class="filter__text-input" type="text" placeholder="Введите бренд шины">
               <ul>
-                <li>
-                  <label>B Gudrich</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="brand" id="B Gudrich">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="B Gudrich">B Gudrich</label>
                 </li>
-                <li>
-                  <label>Wridrestone</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="brand" id="Wridrestone">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="Wridrestone">Wridrestone</label>
                 </li>
-                <li>
-                  <label>Rarym</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="brand" id="Rarym">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="Rarym">Rarym</label>
                 </li>
-                <li>
-                  <label>BF hide</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="brand" id="BF hide">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="BF hide">BF hide</label>
                 </li>
               </ul>
-              <button type="button">Показать еще</button>
+              <button class="filter__show-more-button" type="button">Показать еще</button>
             </fieldset>
 
             <fieldset>
-              <legend>Модель</legend>
-              <button type="button">Модель</button>
-              <input type="text" placeholder="Введите модель шины">
+              <legend class="filter__filedset-title">Модель</legend>
+              <button class="filter__open-button" type="button">Модель</button>
+              <input class="filter__text-input" type="text" placeholder="Введите модель шины">
               <ul>
-                <li>
-                  <label>ALINA</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="model" id="ALINA">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="ALINA">ALINA</label>
                 </li>
-                <li>
-                  <label>BLIWWAS</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="model" id="BLIWWAS">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="BLIWWAS">BLIWWAS</label>
                 </li>
-                <li>
-                  <label>FORCE Moode</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="model" id="FORCE Moode">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="FORCE Moode">FORCE Moode</label>
                 </li>
-                <li>
-                  <label>ICE Gide</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="model" id="ICE Gide">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="ICE Gide">ICE Gide</label>
                 </li>
               </ul>
-              <button type="button">Показать еще</button>
+              <button class="filter__show-more-button" type="button">Показать еще</button>
             </fieldset>
 
             <fieldset>
-              <legend>Технология</legend>
-              <button type="button">Технология</button>
-              <ul>
-                <li>
-                  <label>Да</label>
-                  <input type="checkbox">
+              <legend class="filter__filedset-title">Технология</legend>
+              <button class="filter__open-button" type="button">Технология</button>
+              <ul class="filter__checkbox-list--grey">
+                <li class="filter__checkbox-item">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="technology" id="yes">
+                  <label class="filter__filedset-label filter__filedset-label--grey" for="yes">Да</label>
                 </li>
-                <li>
-                  <label>Нет</label>
-                  <input type="checkbox">
-                </li>
-              </ul>
-            </fieldset>
-
-            <fieldset>
-              <legend>Акции</legend>
-              <button type="button">Акции</button>
-              <ul>
-                <li>
-                  <button type="button">SALE</button>
-                </li>
-                <li>
-                  <button type="button">NEW</button>
-                </li>
-                <li>
-                  <button type="button">HIT</button>
-                </li>
-                <li>
-                  <button type="button">ПОДАРОК</button>
+                <li class="filter__checkbox-item">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="technology" id="no">
+                  <label class="filter__filedset-label filter__filedset-label--grey" for="no">Нет</label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset>
-              <legend>Страны</legend>
-              <button type="button">Страны</button>
-              <ul>
-                <li>
-                  <label>Россия</label>
-                  <input type="checkbox">
+              <legend class="filter__filedset-title">Акции</legend>
+              <button class="filter__open-button" type="button">Акции</button>
+              <ul class="filter__checkbox-list--grey">
+                <li class="filter__checkbox-item">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="stock" id="sale">
+                  <label class="filter__filedset-label filter__filedset-label--grey" for="sale">SALE</label>
                 </li>
-                <li>
-                  <label>Германия</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="stock" id="new">
+                  <label class="filter__filedset-label filter__filedset-label--grey" for="new">NEW</label>
                 </li>
-                <li>
-                  <label>Россия</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="stock" id="hit">
+                  <label class="filter__filedset-label filter__filedset-label--grey" for="hit">HIT</label>
                 </li>
-                <li>
-                  <label>Германия</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="stock" id="present">
+                  <label class="filter__filedset-label filter__filedset-label--grey" for="present">ПОДАРОК</label>
                 </li>
               </ul>
-              <button type="button">Показать еще</button>
+            </fieldset>
+
+            <fieldset>
+              <legend class="filter__filedset-title">Страны</legend>
+              <button class="filter__open-button" type="button">Страны</button>
+              <ul>
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="country" id="russia">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="russia">Россия</label>
+                </li>
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="country" id="germany">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="germany">Германия</label>
+                </li>
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="country" id="ukraine">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="ukraine">Украина</label>
+                </li>
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="country" id="belarus">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="belarus">Беларусь</label>
+                </li>
+              </ul>
+              <button class="filter__show-more-button" type="button">Показать еще</button>
             </fieldset>
           </div>
           <div class="filter__brands">
-            <fieldset class="filter__seasonality filter__seasonality--mobile">
-              <legend class="filter__seasonality-title">Сезонность</legend>
-              <button class="filter__seasonality-button" type="button">Сезонность</button>
+            <fieldset class="filter__seasonality">
+              <legend class="filter__filedset-title">Сезонность</legend>
+              <button class="filter__open-button" type="button">Сезонность</button>
               <ul class="filter__seasonality-list">
-                <li class="filter__seasonality-item">
-                  <button class="filter__seasonality-info-button" type="button">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <button class="filter__info-button" type="button">
                     <span class="visually-hidden">
                       Справка
                     </span>
                   </button>
-                  <input class="visually-hidden filter__seasonality-checkbox" type="checkbox" name="seasonality-brands" id="winter-brands">
-                  <label class="filter__seasonality-label" for="winter-brands">Зимние</label>
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="seasonality-brands" id="winter-brands">
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="winter-brands">Зимние</label>
                 </li>
-                <li class="filter__seasonality-item">
-                  <button class="filter__seasonality-info-button" type="button">
+                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                  <button class="filter__info-button" type="button">
                     <span class="visually-hidden">
                       Справка
                     </span>
                   </button>
-                  <input class="visually-hidden filter__seasonality-checkbox" type="checkbox" name="seasonality-brands" id="summer-brands" checked>
-                  <label class="filter__seasonality-label" for="summer-brands">Летние</label>
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="seasonality-brands" id="summer-brands" checked>
+                  <label class="filter__filedset-label filter__filedset-label--orange" for="summer-brands">Летние</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset>
-              <legend>Марка</legend>
-              <button type="button">Марка</button>
-              <select>
+            <fieldset class="filter__brand">
+              <legend class="filter__filedset-title">Марка</legend>
+              <button class="filter__open-button" type="button">Марка</button>
+              <select class="filter__filedset-select">
                 <option>BMW</option>
               </select>
             </fieldset>
 
             <fieldset>
-              <legend>Модель</legend>
-              <button type="button">Модель</button>
-              <select>
+              <legend class="filter__filedset-title">Модель</legend>
+              <button class="filter__open-button" type="button">Модель</button>
+              <select class="filter__filedset-select">
                 <option>1-series</option>
               </select>
             </fieldset>
 
             <fieldset>
-              <legend>Кузов</legend>
-              <button type="button">Кузов</button>
-              <select>
+              <legend class="filter__filedset-title">Кузов</legend>
+              <button class="filter__open-button" type="button">Кузов</button>
+              <select class="filter__filedset-select">
                 <option>E81 3d</option>
               </select>
             </fieldset>
 
             <fieldset>
-              <legend>Модификация</legend>
-              <button type="button">Модификация</button>
-              <select>
+              <legend class="filter__filedset-title">Модификация</legend>
+              <button class="filter__open-button" type="button">Модификация</button>
+              <select class="filter__filedset-select">
                 <option>116 d</option>
               </select>
             </fieldset>
 
             <fieldset>
-              <legend>R16</legend>
-              <button type="button">R16</button>
-              <ul>
-                <li>
-                  <label>205/55 R17</label>
-                  <input type="checkbox">
+              <legend class="filter__filedset-title">R16</legend>
+              <button class="filter__open-button" type="button">R16</button>
+              <ul class="filter__checkbox-list--grey">
+                <li class="filter__checkbox-item">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R16" id="205/55R17_1">
+                  <label class="filter__filedset-label filter__filedset-label--grey" for="205/55R17_1">205/55 R17</label>
                 </li>
-                <li>
-                  <label>205/55 R17</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R16" id="205/55R17_2">
+                  <label class="filter__filedset-label filter__filedset-label--grey" for="205/55R17_2">205/55 R17</label>
                 </li>
-                <li>
-                  <label>205/55 R17</label>
-                  <input type="checkbox">
+                <li class="filter__checkbox-item">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R16" id="205/55R17_3">
+                  <label class="filter__filedset-label filter__filedset-label--grey" for="205/55R17_3">205/55 R17</label>
                 </li>
-                <li>
-                  <label>205/55 R17</label>
-                  <input type="checkbox">
-                </li>
-              </ul>
-            </fieldset>
-
-            <fieldset>
-              <legend>R17</legend>
-              <button type="button">R17</button>
-              <ul>
-                <li>
-                  <h3>Передняя ось</h3>
-                  <ul>
-                    <li>
-                      <label>215/45 R17</label>
-                      <input type="checkbox">
-                    </li>
-                    <li>
-                      <label>215/50 R17</label>
-                      <input type="checkbox">
-                    </li>
-                    <li>
-                      <label>205/50 R17</label>
-                      <input type="checkbox">
-                    </li>
-                    <li>
-                      <label>195/55 R17</label>
-                      <input type="checkbox">
-                    </li>
-                    <li>
-                      <label>225/55 R17</label>
-                      <input type="checkbox">
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <h3>Задняя ось</h3>
-                  <ul>
-                    <li>
-                      <label>225/45 R17</label>
-                      <input type="checkbox">
-                    </li>
-                    <li>
-                      <label>225/50 R17</label>
-                      <input type="checkbox">
-                    </li>
-                    <li>
-                      <label>245/50 R17</label>
-                      <input type="checkbox">
-                    </li>
-                    <li>
-                      <label>205/55 R17</label>
-                      <input type="checkbox">
-                    </li>
-                  </ul>
+                <li class="filter__checkbox-item">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R16" id="205/55R17_4">
+                  <label class="filter__filedset-label filter__filedset-label--grey" for="205/55R17_4">205/55 R17</label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset>
-              <legend>R18</legend>
-              <button type="button">R18</button>
-
-              <ul>
+              <legend class="filter__filedset-title">R17</legend>
+              <button class="filter__open-button" type="button">R17</button>
+              <ul class="filter__checkbox-list--grey">
                 <li>
-                  <label>255/40 R18</label>
-                  <input type="checkbox">
+                  <h3 class="filter__checkbox-title">Передняя ось</h3>
+                  <ul>
+                    <li class="filter__checkbox-item">
+                      <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R17_front" id="215/45R17_front">
+                      <label class="filter__filedset-label filter__filedset-label--grey" for="215/45R17_front">215/45 R17</label>
+                    </li>
+                    <li class="filter__checkbox-item">
+                      <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R17_front" id="215/50R17_front">
+                      <label class="filter__filedset-label filter__filedset-label--grey" for="215/50R17_front">215/50 R17</label>
+                    </li>
+                    <li class="filter__checkbox-item">
+                      <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R17_front" id="205/50R17_front">
+                      <label class="filter__filedset-label filter__filedset-label--grey" for="205/50R17_front">205/50 R17</label>
+                    </li>
+                    <li class="filter__checkbox-item">
+                      <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R17_front" id="195/55R17_front">
+                      <label class="filter__filedset-label filter__filedset-label--grey" for="195/55R17_front">195/55 R17</label>
+                    </li>
+                    <li class="filter__checkbox-item">
+                      <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R17_front" id="225/55R17_front">
+                      <label class="filter__filedset-label filter__filedset-label--grey" for="225/55R17_front">225/55 R17</label>
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <label>245/45 R18</label>
-                  <input type="checkbox">
+                  <h3 class="filter__checkbox-title">Задняя ось</h3>
+                  <ul>
+                    <li class="filter__checkbox-item">
+                      <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R17_back" id="225/45R17_back">
+                      <label class="filter__filedset-label filter__filedset-label--grey" for="225/45R17_back">225/45 R17</label>
+                    </li>
+                    <li class="filter__checkbox-item">
+                      <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R17_back" id="225/50R17_back">
+                      <label class="filter__filedset-label filter__filedset-label--grey" for="225/50R17_back">225/50 R17</label>
+                    </li>
+                    <li class="filter__checkbox-item">
+                      <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R17_back" id="245/50R17_back">
+                      <label class="filter__filedset-label filter__filedset-label--grey" for="245/50R17_back">245/50 R17</label>
+                    </li>
+                    <li class="filter__checkbox-item">
+                      <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R17_back" id="205/55R17_back" checked>
+                      <label class="filter__filedset-label filter__filedset-label--grey" for="205/55R17_back">205/55 R17</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset>
+              <legend class="filter__filedset-title">R18</legend>
+              <button class="filter__open-button" type="button">R18</button>
+
+              <ul class="filter__checkbox-list--grey">
+                <li class="filter__checkbox-item">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R18" id="255/40R18">
+                  <label class="filter__filedset-label filter__filedset-label--grey" for="255/40R18">255/40 R18</label>
+                </li>
+                <li class="filter__checkbox-item">
+                  <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R18" id="245/45R18">
+                  <label class="filter__filedset-label filter__filedset-label--grey" for="245/45R18">245/45 R18</label>
                 </li>
               </ul>
             </fieldset>
           </div>
 
-          <button type="submit">подобрать</button>
+          <button class="filter__apply-button" type="submit">подобрать</button>
 
-          <fieldset>
+          <fieldset class="filter__extra-options">
             <legend>Дополнительные параметры</legend>
             <button type="button">Дополнительные параметры</button>
           </fieldset>
 
-          <button type="reset">Сбросить фильтр</button>
+          <button class="filter__reset-button" type="reset">Сбросить фильтр</button>
         </form>
       </section>
       <section class="catalog">
@@ -1212,5 +1231,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/filter.js"></script>
 </body>
 </html>
