@@ -199,7 +199,11 @@ p {
   padding-top: 24px;
   margin-top: auto;
 }
+.product__card .card__figcaption {
+  display: none;
+}
 .card__price {
+  display: none;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -225,6 +229,12 @@ p {
   height: 26px;
   background-image: url("../img/product-card.svg");
   background-repeat: no-repeat;
+}
+.product__card .card__presence {
+  display: none;
+}
+.product__card .card__presence::before {
+  content: none;
 }
 .card__presence-text {
   font-size: 18px;
@@ -268,9 +278,18 @@ p {
 .card__presence--none::before {
   content: none;
 }
+.product__card .card__presence--none {
+  display: block;
+}
+.card__presence--none + .card__price {
+  display: none;
+}
 .card__presence--yes .card__presence-text,
 .card__presence--yes .card__presence-link {
   display: none;
+}
+.card__presence--yes + .card__price {
+  display: block;
 }
 .card__link {
   position: absolute;
@@ -1736,6 +1755,65 @@ p {
 }
 .catalog__list--mobile .catalog__item:nth-child(n+6) {
   display: none;
+}
+.product__card {
+  width: 288px;
+  margin: 0 auto;
+}
+.product__card--mobile .product__rating,
+.product__card--mobile .product__tabs,
+.product__card--mobile .product__specifications,
+.product__card--mobile .product__links {
+  display: none;
+}
+.product__title {
+  font-size: 20px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: bold;
+  color: #48494d;
+}
+.product__code {
+  font-size: 15px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+  opacity: 0.6;
+}
+.product__price-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 22px;
+}
+.product__button {
+  width: 288px;
+  height: 50px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ff7931;
+  border: none;
+}
+.product__link {
+  font-size: 15px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: normal;
+  color: #ff7931;
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(255, 121, 49, 0.2);
+          text-decoration-color: rgba(255, 121, 49, 0.2);
+  margin-top: 25px;
 }
 .pagination {
   width: 283px;
