@@ -246,119 +246,125 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Дополнительная информация о товаре</h2>
-      <ul class="tabs__list">
-        <li class="tabs__item">
-          <a class="tabs__link" href="#tabs-about-item">О товаре</a>
-        </li>
-        <li class="tabs__item">
-          <a class="tabs__link" href="#tabs-specifications">Характеристики</a>
-        </li>
-        <li class="tabs__item">
-          <a class="tabs__link" href="#tabs-reviews">Отзывы</a>
-        </li>
-        <li class="tabs__item">
-          <a class="tabs__link" href="#tabs-pickup">Самовывоз</a>
-        </li>
-        <li class="tabs__item">
-          <a class="tabs__link" href="#tabs-delivery">Доставка</a>
-        </li>
-        <li class="tabs__item">
-          <a class="tabs__link" href="#tabs-services">Услуги</a>
-        </li>
-        <li class="tabs__item">
-          <a class="tabs__link" href="#tabs-business">Бизнесу</a>
-        </li>
-      </ul>
-
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li>
-          <form>
-            <fieldset>
-              <legend>Посик по магазинам</legend>
-              <label>Магазин</label>
-              <input type="search">
-            </fieldset>
-            <fieldset>
-              <legend>Когда забрать заказ</legend>
-              <ul>
-                <li>
-                  <label>Забрать сегодня</label>
-                  <input type="checkbox">
-                </li>
-                <li>
-                  <label>Забрать завтра и позднее</label>
-                  <input type="checkbox">
-                </li>
-              </ul>
-            </fieldset>
-          </form>
-          <table>
-            <tr>
-              <th>Адрес</th>
-              <th>Режим работы</th>
-              <th>Доступно</th>
-              <th>Количество</th>
-              <th>Кнопка</th>
-            </tr>
-            <tr>
-              <td>Санкт-Петербург, ул Большая Конюшенная, д 19</td>
-              <td>
-                <p>пн-сб: <span>08:00-19:00</span></p>
-                <p>вс: <span>09:00-17:00</span></p>
-              </td>
-              <td>Завтра и позднее</td>
-              <td>Мало</td>
-              <td>
-                <button type="button">КУПИТЬ</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Санкт-Петербург, ул Большая Конюшенная, д 19</td>
-              <td>
-                <p>пн-сб: <span>08:00-19:00</span></p>
-                <p>вс: <span>09:00-17:00</span></p>
-              </td>
-              <td>Завтра и позднее</td>
-              <td>Много</td>
-              <td>
-                <button type="button">КУПИТЬ</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Санкт-Петербург, ул Большая Конюшенная, д 19</td>
-              <td>
-                <p>пн-сб: <span>08:00-19:00</span></p>
-                <p>вс: <span>09:00-17:00</span></p>
-              </td>
-              <td>Завтра и позднее</td>
-              <td>Достаточно</td>
-              <td>
-                <button type="button">КУПИТЬ</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Санкт-Петербург, ул Большая Конюшенная, д 19</td>
-              <td>
-                <p>пн-сб: <span>08:00-19:00</span></p>
-                <p>вс: <span>09:00-17:00</span></p>
-              </td>
-              <td>Завтра и позднее</td>
-              <td>Мало</td>
-              <td>
-                <button type="button">КУПИТЬ</button>
-              </td>
-            </tr>
-          </table>
-        </li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+    <section class="extra-info">
+      <h2 class="visually-hidden">Дополнительная информация о товаре</h2>
+      <div class="tabs__slider">
+        <input type="radio" class="tabs__control tabs__control--1" name="tabs_control" id="tabs-1">
+        <input type="radio" class="tabs__control tabs__control--2" name="tabs_control" id="tabs-2">
+        <input type="radio" class="tabs__control tabs__control--3" name="tabs_control" id="tabs-3">
+        <input type="radio" class="tabs__control tabs__control--4" name="tabs_control" id="tabs-4">
+        <input type="radio" class="tabs__control tabs__control--5" name="tabs_control" id="tabs-5">
+        <input type="radio" class="tabs__control tabs__control--6" name="tabs_control" id="tabs-6">
+        <input type="radio" class="tabs__control tabs__control--7" name="tabs_control" id="tabs-7">
+        <ul class="tabs__slide-list">
+          <li>
+            <label class="tabs__switch tabs__switch--1" for="tabs-1">О товаре</label>
+            <div class="tabs__slide tabs__slide--1">Слайд О товаре</div>
+          </li>
+          <li>
+            <label class="tabs__switch tabs__switch--2" for="tabs-2">Характеристики</label>
+            <div class="tabs__slide tabs__slide--2">Слайд Характеристики</div>
+          </li>
+          <li>
+            <label class="tabs__switch tabs__switch--3" for="tabs-3">Отзывы</label>
+            <div class="tabs__slide tabs__slide--3">Слайд Отзывы</div>
+          </li>
+          <li>
+            <label class="tabs__switch tabs__switch--4" for="tabs-4">Самовывоз</label>
+            <div class="tabs__slide tabs__slide--4">
+              <form>
+                <fieldset>
+                  <legend>Посик по магазинам</legend>
+                  <label>Магазин</label>
+                  <input type="search">
+                </fieldset>
+                <fieldset>
+                  <legend>Когда забрать заказ</legend>
+                  <ul>
+                    <li>
+                      <label>Забрать сегодня</label>
+                      <input type="checkbox">
+                    </li>
+                    <li>
+                      <label>Забрать завтра и позднее</label>
+                      <input type="checkbox">
+                    </li>
+                  </ul>
+                </fieldset>
+              </form>
+              <table>
+                <tr>
+                  <th>Адрес</th>
+                  <th>Режим работы</th>
+                  <th>Доступно</th>
+                  <th>Количество</th>
+                  <th>Кнопка</th>
+                </tr>
+                <tr>
+                  <td>Санкт-Петербург, ул Большая Конюшенная, д 19</td>
+                  <td>
+                    <p>пн-сб: <span>08:00-19:00</span></p>
+                    <p>вс: <span>09:00-17:00</span></p>
+                  </td>
+                  <td>Завтра и позднее</td>
+                  <td>Мало</td>
+                  <td>
+                    <button type="button">КУПИТЬ</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Санкт-Петербург, ул Большая Конюшенная, д 19</td>
+                  <td>
+                    <p>пн-сб: <span>08:00-19:00</span></p>
+                    <p>вс: <span>09:00-17:00</span></p>
+                  </td>
+                  <td>Завтра и позднее</td>
+                  <td>Много</td>
+                  <td>
+                    <button type="button">КУПИТЬ</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Санкт-Петербург, ул Большая Конюшенная, д 19</td>
+                  <td>
+                    <p>пн-сб: <span>08:00-19:00</span></p>
+                    <p>вс: <span>09:00-17:00</span></p>
+                  </td>
+                  <td>Завтра и позднее</td>
+                  <td>Достаточно</td>
+                  <td>
+                    <button type="button">КУПИТЬ</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Санкт-Петербург, ул Большая Конюшенная, д 19</td>
+                  <td>
+                    <p>пн-сб: <span>08:00-19:00</span></p>
+                    <p>вс: <span>09:00-17:00</span></p>
+                  </td>
+                  <td>Завтра и позднее</td>
+                  <td>Мало</td>
+                  <td>
+                    <button type="button">КУПИТЬ</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </li>
+          <li>
+            <label class="tabs__switch tabs__switch--5" for="tabs-5">Доставка</label>
+            <div class="tabs__slide tabs__slide--5">Слайд Доставка</div>
+          </li>
+          <li>
+            <label class="tabs__switch tabs__switch--6" for="tabs-6">Услуги</label>
+            <div class="tabs__slide tabs__slide--6">Слайд Услуги</div>
+          </li>
+          <li>
+            <label class="tabs__switch tabs__switch--7" for="tabs-7">Бизнесу</label>
+            <div class="tabs__slide tabs__slide--7">Слайд Бизнесу</div>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="banner banner--tyres">
