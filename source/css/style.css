@@ -1893,6 +1893,46 @@ p {
           transform: rotate(225deg);
   border-color: #48494d;
 }
+.pickup__table-wrapper {
+  display: inline-block;
+  text-align: center;
+}
+.pickup__table {
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+}
+@media screen and (max-width: 725px) {
+  .pickup__table {
+    width: 320px;
+  }
+  .pickup__table thead {
+    display: none;
+  }
+  .pickup__table tr {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+  }
+  .pickup__table td {
+    display: block;
+    text-align: left;
+    font-size: 13px;
+  }
+  .pickup__table td span {
+    float: right;
+  }
+  .pickup__table td::before {
+    content: attr(data-label);
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
 .pagination {
   width: 283px;
   margin: 0 auto;

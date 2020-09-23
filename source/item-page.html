@@ -271,7 +271,7 @@
           </li>
           <li>
             <label class="tabs__switch tabs__switch--4" for="tabs-4">Самовывоз</label>
-            <div class="tabs__slide tabs__slide--4">
+            <div class="tabs__slide tabs__slide--4 pickup">
               <form>
                 <fieldset>
                   <legend>Посик по магазинам</legend>
@@ -292,63 +292,69 @@
                   </ul>
                 </fieldset>
               </form>
-              <table>
-                <tr>
-                  <th>Адрес</th>
-                  <th>Режим работы</th>
-                  <th>Доступно</th>
-                  <th>Количество</th>
-                  <th>Кнопка</th>
-                </tr>
-                <tr>
-                  <td>Санкт-Петербург, ул Большая Конюшенная, д 19</td>
-                  <td>
-                    <p>пн-сб: <span>08:00-19:00</span></p>
-                    <p>вс: <span>09:00-17:00</span></p>
-                  </td>
-                  <td>Завтра и позднее</td>
-                  <td>Мало</td>
-                  <td>
-                    <button type="button">КУПИТЬ</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Санкт-Петербург, ул Большая Конюшенная, д 19</td>
-                  <td>
-                    <p>пн-сб: <span>08:00-19:00</span></p>
-                    <p>вс: <span>09:00-17:00</span></p>
-                  </td>
-                  <td>Завтра и позднее</td>
-                  <td>Много</td>
-                  <td>
-                    <button type="button">КУПИТЬ</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Санкт-Петербург, ул Большая Конюшенная, д 19</td>
-                  <td>
-                    <p>пн-сб: <span>08:00-19:00</span></p>
-                    <p>вс: <span>09:00-17:00</span></p>
-                  </td>
-                  <td>Завтра и позднее</td>
-                  <td>Достаточно</td>
-                  <td>
-                    <button type="button">КУПИТЬ</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Санкт-Петербург, ул Большая Конюшенная, д 19</td>
-                  <td>
-                    <p>пн-сб: <span>08:00-19:00</span></p>
-                    <p>вс: <span>09:00-17:00</span></p>
-                  </td>
-                  <td>Завтра и позднее</td>
-                  <td>Мало</td>
-                  <td>
-                    <button type="button">КУПИТЬ</button>
-                  </td>
-                </tr>
-              </table>
+              <div class="pickup__table-wrapper">
+                <table class="pickup__table">
+                  <thead>
+                    <tr>
+                      <th>Адрес</th>
+                      <th>Режим работы</th>
+                      <th>Доступно</th>
+                      <th>Количество</th>
+                      <th>Кнопка</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Адрес">Санкт-Петербург, ул Большая Конюшенная, д 19</td>
+                      <td data-label="Режим работы">
+                        <p>пн-сб: <span>08:00-19:00</span></p>
+                        <p>вс: <span>09:00-17:00</span></p>
+                      </td>
+                      <td data-label="Доступно">Завтра и позднее</td>
+                      <td data-label="Количество">Мало</td>
+                      <td data-label="Кнопка">
+                        <button type="button">КУПИТЬ</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-label="Адрес">Санкт-Петербург, ул Большая Конюшенная, д 19</td>
+                      <td data-label="Режим работы">
+                        <p>пн-сб: <span>08:00-19:00</span></p>
+                        <p>вс: <span>09:00-17:00</span></p>
+                      </td>
+                      <td data-label="Доступно">Завтра и позднее</td>
+                      <td data-label="Количество">Много</td>
+                      <td data-label="Кнопка">
+                        <button type="button">КУПИТЬ</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-label="Адрес">Санкт-Петербург, ул Большая Конюшенная, д 19</td>
+                      <td data-label="Режим работы">
+                        <p>пн-сб: <span>08:00-19:00</span></p>
+                        <p>вс: <span>09:00-17:00</span></p>
+                      </td>
+                      <td data-label="Доступно">Завтра и позднее</td>
+                      <td data-label="Количество">Достаточно</td>
+                      <td data-label="Кнопка">
+                        <button type="button">КУПИТЬ</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-label="Адрес">Санкт-Петербург, ул Большая Конюшенная, д 19</td>
+                      <td data-label="Режим работы">
+                        <p>пн-сб: <span>08:00-19:00</span></p>
+                        <p>вс: <span>09:00-17:00</span></p>
+                      </td>
+                      <td data-label="Доступно">Завтра и позднее</td>
+                      <td data-label="Количество">Мало</td>
+                      <td data-label="Кнопка">
+                        <button type="button">КУПИТЬ</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </li>
           <li>
