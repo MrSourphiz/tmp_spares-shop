@@ -14,7 +14,7 @@
       <div class="page-header__top-line">
         <div class="page-header__container">
           <h1 class="visually-hidden">Интернет-магазин Автозапчастей: Каталог товаров</h1>
-          <button class="page-header__menu-toggle page-header__menu-toggle--active" type="button">
+          <button class="page-header__menu-toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <a class="page-header__logo" href="index.html" aria-label="Логотип Интернет-магазина Автозапчастей">
@@ -272,22 +272,28 @@
           <li>
             <label class="tabs__switch tabs__switch--4" for="tabs-4">Самовывоз</label>
             <div class="tabs__slide tabs__slide--4 pickup">
-              <form>
-                <fieldset>
-                  <legend>Посик по магазинам</legend>
-                  <label>Магазин</label>
-                  <input type="search">
+              <form class="pickup__form">
+                <fieldset class="pickup__search">
+                  <legend class="visually-hidden">Поиск по магазинам</legend>
+                  <div class="pickup__search-wrapper">
+                    <input class="pickup__search-input" type="search" name="shop-search" id="shop-search" placeholder="Введите название магазина">
+                    <label class="pickup__label" for="shop-search">Магазин</label>
+                  </div>
                 </fieldset>
-                <fieldset>
-                  <legend>Когда забрать заказ</legend>
-                  <ul>
-                    <li>
-                      <label>Забрать сегодня</label>
-                      <input type="checkbox">
+                <fieldset class="pickup__date">
+                  <legend class="visually-hidden">Когда забрать заказ</legend>
+                  <ul class="pickup__date-list">
+                    <li class="pickup__date-item">
+                      <div class="pickup__date-wrapper">
+                        <input class="visually-hidden pickup__checkbox" type="checkbox" name="pickup-the-order" id="pickup-today">
+                        <label class="pickup__label" for="pickup-today">Забрать сегодня</label>
+                      </div>
                     </li>
-                    <li>
-                      <label>Забрать завтра и позднее</label>
-                      <input type="checkbox">
+                    <li class="pickup__date-item">
+                      <div class="pickup__date-wrapper">
+                        <input class="visually-hidden pickup__checkbox" type="checkbox" name="pickup-the-order" id="pickup-tomorrow">
+                        <label class="pickup__label" for="pickup-tomorrow">Забрать завтра и позднее</label>
+                      </div>
                     </li>
                   </ul>
                 </fieldset>
@@ -313,7 +319,7 @@
                       <td data-label="Доступно">Завтра и позднее</td>
                       <td data-label="Количество">Мало</td>
                       <td data-label="Кнопка">
-                        <button type="button">КУПИТЬ</button>
+                        <button class="pickup__table-button" type="button">КУПИТЬ</button>
                       </td>
                     </tr>
                     <tr>
@@ -325,7 +331,7 @@
                       <td data-label="Доступно">Завтра и позднее</td>
                       <td data-label="Количество">Много</td>
                       <td data-label="Кнопка">
-                        <button type="button">КУПИТЬ</button>
+                        <button class="pickup__table-button" type="button">КУПИТЬ</button>
                       </td>
                     </tr>
                     <tr>
@@ -337,7 +343,7 @@
                       <td data-label="Доступно">Завтра и позднее</td>
                       <td data-label="Количество">Достаточно</td>
                       <td data-label="Кнопка">
-                        <button type="button">КУПИТЬ</button>
+                        <button class="pickup__table-button" type="button">КУПИТЬ</button>
                       </td>
                     </tr>
                     <tr>
@@ -349,7 +355,7 @@
                       <td data-label="Доступно">Завтра и позднее</td>
                       <td data-label="Количество">Мало</td>
                       <td data-label="Кнопка">
-                        <button type="button">КУПИТЬ</button>
+                        <button class="pickup__table-button" type="button">КУПИТЬ</button>
                       </td>
                     </tr>
                   </tbody>
@@ -589,6 +595,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/menu.js"></script>
 
 </body>
 </html>

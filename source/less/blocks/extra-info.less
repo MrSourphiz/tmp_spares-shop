@@ -87,6 +87,103 @@
   border-color: #48494d;
 }
 
+.pickup__form {
+  margin-bottom: 25px;
+}
+
+.pickup__form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pickup__search-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 287px;
+  margin: 0 auto;
+}
+
+.pickup__search-input {
+  width: auto;
+  height: 35px;
+  padding-left: 20px;
+  border-color: #c4c4c4;
+  margin-top: 20px;
+}
+
+.pickup__date-item {
+  padding-top: 17px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.pickup__date-wrapper {
+  position: relative;
+  width: 287px;
+  margin: 0 auto;
+}
+
+.pickup__label {
+  position: initial;
+
+  font-size: 15px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: normal;
+
+  color: #000000;
+
+  cursor: pointer;
+}
+
+.pickup__label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: initial;
+  right: 0;
+
+  width: 14px;
+  height: 14px;
+
+  border: 1px solid #c4c4c4;
+
+  cursor: pointer;
+}
+
+.pickup__label::after {
+  content: "";
+
+  display: none;
+
+  position: absolute;
+  top: 4px;
+  left: initial;
+  right: 5px;
+
+  width: 4px;
+  height: 8px;
+
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  transform: rotate(45deg);
+}
+
+.pickup__label:hover::before,
+.pickup__label:focus::before {
+  border-color: #ff7931;
+}
+
+.pickup__checkbox:checked + .pickup__label::before {
+  background-color: #ff7931;
+  border-color: #ff7931;
+}
+
+.pickup__checkbox:checked + .pickup__label::after {
+  display: block;
+}
+
 .pickup__table-wrapper {
   display: inline-block;
   text-align: center;
@@ -118,12 +215,26 @@
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 10px;
+
+    border-bottom: 1px solid #c4c4c4;
   }
 
   .pickup__table td {
     display: block;
     text-align: left;
-    font-size: 13px;
+    font-size: 15px;
+    line-height: 17px;
+    font-style: normal;
+    font-weight: normal;
+
+    color: rgba(0, 0, 0, 0.7);
+
+    margin-top: 12px;
+  }
+
+  .pickup__table td:first-child {
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .pickup__table td span {
@@ -132,8 +243,65 @@
 
   .pickup__table td::before {
     content: attr(data-label);
+
     display: block;
-    text-transform: uppercase;
+
+    font-size: 15px;
+    line-height: 17px;
+    font-style: normal;
     font-weight: bold;
+
+    color: #000000;
+
+    margin-bottom: 11px;
+  }
+
+  .pickup__table td:first-child::before {
+    display: none;
+  }
+
+  .pickup__table td:last-child::before {
+    content: "Нажимая на эту кнопку вы сможете забрать товар вне очереди";
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .pickup__table-button {
+    width: 288px;
+    height: 50px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    background-color: #ff7931;
+
+    border: none;
+
+    margin-top: 17px;
+    margin-bottom: 20px;
+
+    cursor: pointer;
+  }
+
+  .pickup__table-button:hover,
+  .pickup__table-button:focus {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .pickup__table-button:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
