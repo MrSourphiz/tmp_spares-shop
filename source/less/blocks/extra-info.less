@@ -1,0 +1,307 @@
+.extra-info {
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+  margin: 0 auto;
+}
+
+.tabs__control {
+  display: none;
+}
+
+.tabs__slide {
+  display: none;
+}
+
+.tabs__switch {
+  position: relative;
+
+  display: block;
+  width: 304px;
+  height: 23px;
+
+  font-size: 20px;
+  line-height: 23px;
+  font-style: normal;
+  font-weight: normal;
+
+  color: #4f4f4f;
+
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 16px;
+
+  background-color: #f9f9fc;
+
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+
+.tabs__switch::before {
+  content: "";
+
+  position: absolute;
+  top: 20px;
+  right: 16px;
+
+  width: 9px;
+  height: 9px;
+  border-bottom: 1px solid #bdbec2;
+  border-right: 1px solid #bdbec2;
+  transform: rotate(45deg);
+}
+
+.tabs__control--1:checked ~ .tabs__slide-list .tabs__slide--1,
+.tabs__control--2:checked ~ .tabs__slide-list .tabs__slide--2,
+.tabs__control--3:checked ~ .tabs__slide-list .tabs__slide--3,
+.tabs__control--4:checked ~ .tabs__slide-list .tabs__slide--4,
+.tabs__control--5:checked ~ .tabs__slide-list .tabs__slide--5,
+.tabs__control--6:checked ~ .tabs__slide-list .tabs__slide--6,
+.tabs__control--7:checked ~ .tabs__slide-list .tabs__slide--7 {
+  display: block;
+}
+
+.tabs__control--1:checked ~ .tabs__slide-list .tabs__switch--1,
+.tabs__control--2:checked ~ .tabs__slide-list .tabs__switch--2,
+.tabs__control--3:checked ~ .tabs__slide-list .tabs__switch--3,
+.tabs__control--4:checked ~ .tabs__slide-list .tabs__switch--4,
+.tabs__control--5:checked ~ .tabs__slide-list .tabs__switch--5,
+.tabs__control--6:checked ~ .tabs__slide-list .tabs__switch--6,
+.tabs__control--7:checked ~ .tabs__slide-list .tabs__switch--7 {
+  font-weight: bold;
+  color: #48494d;
+  background-color: #ffffff;
+}
+
+.tabs__control--1:checked ~ .tabs__slide-list .tabs__switch--1::before,
+.tabs__control--2:checked ~ .tabs__slide-list .tabs__switch--2::before,
+.tabs__control--3:checked ~ .tabs__slide-list .tabs__switch--3::before,
+.tabs__control--4:checked ~ .tabs__slide-list .tabs__switch--4::before,
+.tabs__control--5:checked ~ .tabs__slide-list .tabs__switch--5::before,
+.tabs__control--6:checked ~ .tabs__slide-list .tabs__switch--6::before,
+.tabs__control--7:checked ~ .tabs__slide-list .tabs__switch--7::before {
+  top: 30px;
+  transform: rotate(225deg);
+  border-color: #48494d;
+}
+
+.pickup__form {
+  margin-bottom: 25px;
+}
+
+.pickup__form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pickup__search-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 287px;
+  margin: 0 auto;
+}
+
+.pickup__search-input {
+  width: auto;
+  height: 35px;
+  padding-left: 20px;
+  border-color: #c4c4c4;
+  margin-top: 20px;
+}
+
+.pickup__date-item {
+  padding-top: 17px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.pickup__date-wrapper {
+  position: relative;
+  width: 287px;
+  margin: 0 auto;
+}
+
+.pickup__label {
+  position: initial;
+
+  font-size: 15px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: normal;
+
+  color: #000000;
+
+  cursor: pointer;
+}
+
+.pickup__label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: initial;
+  right: 0;
+
+  width: 14px;
+  height: 14px;
+
+  border: 1px solid #c4c4c4;
+
+  cursor: pointer;
+}
+
+.pickup__label::after {
+  content: "";
+
+  display: none;
+
+  position: absolute;
+  top: 4px;
+  left: initial;
+  right: 5px;
+
+  width: 4px;
+  height: 8px;
+
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  transform: rotate(45deg);
+}
+
+.pickup__label:hover::before,
+.pickup__label:focus::before {
+  border-color: #ff7931;
+}
+
+.pickup__checkbox:checked + .pickup__label::before {
+  background-color: #ff7931;
+  border-color: #ff7931;
+}
+
+.pickup__checkbox:checked + .pickup__label::after {
+  display: block;
+}
+
+.pickup__table-wrapper {
+  display: inline-block;
+  text-align: center;
+}
+
+.pickup__table {
+  width: 100%;
+  padding: 0;
+
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  margin: 0;
+}
+
+@media screen and (max-width: 725px) {
+  .pickup__table {
+    width: 320px;
+  }
+
+  .pickup__table thead {
+    display: none;
+  }
+
+  .pickup__table tr {
+    display: block;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .pickup__table td {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    line-height: 17px;
+    font-style: normal;
+    font-weight: normal;
+
+    color: rgba(0, 0, 0, 0.7);
+
+    margin-top: 12px;
+  }
+
+  .pickup__table td:first-child {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .pickup__table td span {
+    float: right;
+  }
+
+  .pickup__table td::before {
+    content: attr(data-label);
+
+    display: block;
+
+    font-size: 15px;
+    line-height: 17px;
+    font-style: normal;
+    font-weight: bold;
+
+    color: #000000;
+
+    margin-bottom: 11px;
+  }
+
+  .pickup__table td:first-child::before {
+    display: none;
+  }
+
+  .pickup__table td:last-child::before {
+    content: "Нажимая на эту кнопку вы сможете забрать товар вне очереди";
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .pickup__table-button {
+    width: 288px;
+    height: 50px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    background-color: #ff7931;
+
+    border: none;
+
+    margin-top: 17px;
+    margin-bottom: 20px;
+
+    cursor: pointer;
+  }
+
+  .pickup__table-button:hover,
+  .pickup__table-button:focus {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .pickup__table-button:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
