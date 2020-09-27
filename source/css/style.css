@@ -841,7 +841,7 @@ p {
   text-transform: none;
   color: #000000;
 }
-@media (min-width: 708px) {
+@media (min-width: 1171px) {
   .page-header__wrap {
     width: 100%;
   }
@@ -2464,7 +2464,7 @@ p {
   padding-bottom: 31px;
   margin: 0 auto;
 }
-@media (min-width: 708px) {
+@media (min-width: 1171px) {
   .page-footer__wrap {
     width: 1171px;
     margin: 0 auto;
@@ -2477,10 +2477,21 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .page-footer__form-wrap {
     width: 294px;
     margin: 0;
+  }
+  .page-footer__form-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #48494d;
+    text-align: left;
   }
   .sections-list {
     display: -webkit-box;
@@ -2490,6 +2501,10 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 718px;
   }
   .sections-list__item {
     border: none;
@@ -2499,14 +2514,61 @@ p {
   }
   .page-footer__list-button {
     width: auto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #48494d;
+    padding-left: 0;
   }
   .page-footer__list-button::before {
     display: none;
+  }
+  .info {
+    width: 91px;
+  }
+  .service {
+    width: 147px;
+  }
+  .store {
+    width: 357px;
+  }
+  .store__head {
+    margin: 0;
   }
   .info__list,
   .service__list,
   .store__list {
     display: block;
+  }
+  .store__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-height: 80px;
+  }
+  .store__item {
+    width: 147px;
+  }
+  .page-footer__link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #48494d;
+  }
+  .page-footer__bottom-text {
+    width: 1171px;
+    text-align: left;
   }
 }
 
