@@ -60,6 +60,10 @@
   transform: translateY(-12px) rotateZ(-135deg);
 }
 
+.desktop-menu {
+  display: none;
+}
+
 .page-header__logo {
   margin-left: 35px;
 }
@@ -75,7 +79,6 @@
   left: 0;
 
   z-index: 100;
-
 
   height: 0;
   width: 242px;
@@ -179,12 +182,31 @@
   background-image: url("../img/delivery.svg");
 }
 
+.desktop-address {
+  display: none;
+}
+
 .user-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
   width: 104px;
+}
+
+.user-nav__link--favorites {
+  width: 23px;
+  height: 20px;
+}
+
+.user-nav__link--account {
+  width: 20px;
+  height: 23px;
+}
+
+.user-nav__link--cart {
+  width: 25px;
+  height: 21px;
 }
 
 .nav__list {
@@ -211,4 +233,99 @@
   letter-spacing: 0.6px;
   text-transform: none;
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrap {
+    width: 100%;
+  }
+
+  .page-header__top-line,
+  .page-header__bottom-line {
+    padding-bottom: 22px;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .page-header__bottom-line {
+    padding-bottom: 0;
+  }
+
+  .page-header__container,
+  .nav__container {
+    width: 1171px;
+    margin: 0 auto;
+  }
+
+  .page-header__menu-toggle {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 447px;
+  }
+
+  .desktop-menu__link {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #48494d;
+  }
+
+  .page-header__img {
+    width: 102px;
+    height: 52px;
+  }
+
+  .desktop-address {
+    position: relative;
+    display: block;
+
+    width: 277px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #48494d;
+  }
+
+  .desktop-address::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -40px;
+
+    width: 35px;
+    height: 35px;
+
+    background-image: url("../img/address.svg");
+    background-repeat: no-repeat;
+  }
+
+  .user-nav {
+    width: 114px;
+  }
+
+  .user-nav__link--favorites {
+    width: 27px;
+    height: 25px;
+  }
+
+  .user-nav__link--account {
+    width: 21px;
+    height: 24px;
+  }
+
+  .user-nav__link--cart {
+    width: 29px;
+    height: 26px;
+  }
 }

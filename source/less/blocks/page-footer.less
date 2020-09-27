@@ -133,3 +133,47 @@
 
   margin: 0 auto;
 }
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrap {
+    width: 1171px;
+    margin: 0 auto;
+  }
+
+  .page-footer__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .page-footer__form-wrap {
+    width: 294px;
+    margin: 0;
+  }
+
+  .sections-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sections-list__item {
+    border: none;
+  }
+
+  .sections-list__item:first-child {
+    border: none;
+  }
+
+  .page-footer__list-button {
+    width: auto;
+  }
+
+  .page-footer__list-button::before {
+    display: none;
+  }
+
+  .info__list,
+  .service__list,
+  .store__list {
+    display: block;
+  }
+}
