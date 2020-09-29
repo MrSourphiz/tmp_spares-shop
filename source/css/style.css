@@ -64,6 +64,54 @@ p {
 .control--6:checked ~ .slider__switchers .switch--6::after {
   display: block;
 }
+.control--1:checked ~ .slider__arrows--prev .prev--1,
+.control--2:checked ~ .slider__arrows--prev .prev--2,
+.control--3:checked ~ .slider__arrows--prev .prev--3,
+.control--4:checked ~ .slider__arrows--prev .prev--4,
+.control--5:checked ~ .slider__arrows--prev .prev--5,
+.control--6:checked ~ .slider__arrows--prev .prev--6 {
+  display: block;
+}
+.control--1:checked ~ .slider__arrows--prev .prev--1::before,
+.control--2:checked ~ .slider__arrows--prev .prev--2::before,
+.control--3:checked ~ .slider__arrows--prev .prev--3::before,
+.control--4:checked ~ .slider__arrows--prev .prev--4::before,
+.control--5:checked ~ .slider__arrows--prev .prev--5::before,
+.control--6:checked ~ .slider__arrows--prev .prev--6::before {
+  display: block;
+}
+.control--1:checked ~ .slider__arrows--prev .prev--1::after,
+.control--2:checked ~ .slider__arrows--prev .prev--2::after,
+.control--3:checked ~ .slider__arrows--prev .prev--3::after,
+.control--4:checked ~ .slider__arrows--prev .prev--4::after,
+.control--5:checked ~ .slider__arrows--prev .prev--5::after,
+.control--6:checked ~ .slider__arrows--prev .prev--6::after {
+  display: block;
+}
+.control--1:checked ~ .slider__arrows--next .next--1,
+.control--2:checked ~ .slider__arrows--next .next--2,
+.control--3:checked ~ .slider__arrows--next .next--3,
+.control--4:checked ~ .slider__arrows--next .next--4,
+.control--5:checked ~ .slider__arrows--next .next--5,
+.control--6:checked ~ .slider__arrows--next .next--6 {
+  display: block;
+}
+.control--1:checked ~ .slider__arrows--next .next--1::before,
+.control--2:checked ~ .slider__arrows--next .next--2::before,
+.control--3:checked ~ .slider__arrows--next .next--3::before,
+.control--4:checked ~ .slider__arrows--next .next--4::before,
+.control--5:checked ~ .slider__arrows--next .next--5::before,
+.control--6:checked ~ .slider__arrows--next .next--6::before {
+  display: block;
+}
+.control--1:checked ~ .slider__arrows--next .next--1::after,
+.control--2:checked ~ .slider__arrows--next .next--2::after,
+.control--3:checked ~ .slider__arrows--next .next--3::after,
+.control--4:checked ~ .slider__arrows--next .next--4::after,
+.control--5:checked ~ .slider__arrows--next .next--5::after,
+.control--6:checked ~ .slider__arrows--next .next--6::after {
+  display: block;
+}
 /*ITEM CARD*/
 .card {
   position: relative;
@@ -485,16 +533,6 @@ p {
   color: #48494d;
   padding: 11px 0 4px;
 }
-.tabs__link::before {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  background-color: transparent;
-}
 .tabs__link:hover {
   opacity: 0.6;
 }
@@ -504,9 +542,7 @@ p {
 .tabs__link--active {
   font-weight: 700;
   color: #48494d;
-}
-.tabs__link--active::before {
-  background-color: #ff7931;
+  border-bottom: 2px solid #ff7931;
 }
 .tabs__link--active:active,
 .tabs__link--active:hover {
@@ -519,6 +555,22 @@ p {
   letter-spacing: 0.6px;
   text-transform: none;
   color: #000000;
+}
+@media (min-width: 1171px) {
+  .tabs__link--active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    left: 0;
+    height: 2px;
+    background-color: #ff7931;
+    z-index: 10;
+  }
+  .tabs__link--active {
+    border-bottom: none;
+  }
 }
 .custom-select {
   display: inline-block;
@@ -1506,6 +1558,9 @@ p {
   font-size: 13px;
   text-transform: lowercase;
 }
+.promotions__slider-arrows {
+  display: none;
+}
 .promotions__slider-switchers {
   position: absolute;
   bottom: 15px;
@@ -1600,6 +1655,126 @@ p {
   background-color: #ff7931;
   border-radius: 100%;
   cursor: pointer;
+}
+@media (min-width: 1171px) {
+  .promotions__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 1167px;
+  }
+  .promotions__slider {
+    width: 870px;
+    height: 397px;
+  }
+  .promotions__slide {
+    top: 130px;
+    left: 100px;
+    width: 435px;
+    height: 120px;
+    word-wrap: break-word;
+  }
+  .promotions__slide-title {
+    font-size: 55px;
+  }
+  .promotions__slide-description {
+    font-size: 23px;
+    font-weight: bold;
+  }
+  .promotions__slider-arrows {
+    display: block;
+  }
+  .promotions__slider-arrows--prev {
+    position: absolute;
+    top: 181px;
+    left: 7px;
+  }
+  .promotions__slider-arrows--next {
+    position: absolute;
+    top: 181px;
+    right: 7px;
+  }
+  .promotions__slider-arrow {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  .promotions__slider-arrow--prev {
+    left: 0;
+  }
+  .promotions__slider-arrow--next {
+    right: 0;
+  }
+  .promotions__slider-arrow::before {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  .promotions__slider-arrow::after {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    cursor: pointer;
+  }
+  .promotions__slider-arrow--prev::before {
+    top: 16px;
+    left: 11px;
+  }
+  .promotions__slider-arrow--prev::after {
+    top: 13px;
+    left: 11px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  .promotions__slider-arrow--next::before {
+    top: 16px;
+    right: 11px;
+  }
+  .promotions__slider-arrow--next::after {
+    top: 13px;
+    right: 11px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .promotions__slider-switchers {
+    bottom: 37px;
+    left: 376px;
+    width: 111px;
+  }
+  .promotions__slider-switch::before {
+    width: 11px;
+    height: 11px;
+  }
+  .promotions__slider-switch::after {
+    width: 11px;
+    height: 11px;
+  }
+  .promotion__action {
+    padding-top: 0;
+  }
+  .promotions__action-switchers {
+    display: none;
+  }
 }
 .search {
   margin-top: 57px;

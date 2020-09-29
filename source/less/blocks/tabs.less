@@ -32,20 +32,6 @@
   padding: 11px 0 4px;
 }
 
-.tabs__link::before {
-  content: "";
-  display: block;
-
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  height: 2px;
-
-  background-color: transparent;
-}
-
 .tabs__link:hover {
   opacity: 0.6;
 }
@@ -57,10 +43,7 @@
 .tabs__link--active {
   font-weight: 700;
   color: #48494d;
-}
-
-.tabs__link--active::before {
-  background-color: #ff7931;
+  border-bottom: 2px solid #ff7931;
 }
 
 .tabs__link--active:active,
@@ -75,4 +58,25 @@
   letter-spacing: 0.6px;
   text-transform: none;
   color: #000000;
+}
+
+@media (min-width: @desktop-width) {
+  .tabs__link--active::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    left: 0;
+
+    height: 2px;
+
+    background-color: #ff7931;
+    z-index: 10;
+  }
+
+  .tabs__link--active {
+    border-bottom: none;
+  }
 }
