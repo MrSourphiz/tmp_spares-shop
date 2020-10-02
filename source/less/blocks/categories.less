@@ -42,6 +42,12 @@
   content: "";
 
   position: absolute;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.categories__chemistry::after {
   top: 57px;
   right: 38px;
 
@@ -49,12 +55,10 @@
   height: 37px;
 
   background-image: url("/img/cat-chemistry.png");
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: 25px 37px;
 }
 
-.categories__item:nth-child(2)::after {
+.categories__tyres::after {
   top: 59px;
   right: 30px;
 
@@ -65,7 +69,7 @@
   background-size: 39px 39px;
 }
 
-.categories__item:nth-child(3)::after {
+.categories__instruments::after {
   top: 52px;
   right: 36px;
 
@@ -76,7 +80,7 @@
   background-size: 27px 50px;
 }
 
-.categories__item:nth-child(4)::after {
+.categories__spares::after {
   top: 60px;
   right: 33px;
 
@@ -87,7 +91,7 @@
   background-size: 34px 34px;
 }
 
-.categories__item:nth-child(5)::after {
+.categories__electronic::after {
   top: 62px;
   right: 31px;
 
@@ -98,7 +102,7 @@
   background-size: 38px 30px;
 }
 
-.categories__item:nth-child(6)::after {
+.categories__accessories::after {
   top: 57px;
   right: 40px;
 
@@ -152,4 +156,88 @@
   border-bottom: 1px solid #c4c4c4;
 
   transform: rotate(310deg);
+}
+
+@media (min-width: @desktop-width) {
+  .categories__list {
+    width: 1170px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .categories__item {
+    width: 370px;
+    height: 129px;
+  }
+
+  .categories__item::before {
+    top: 16px;
+    right: 25px;
+
+    width: 97px;
+    height: 97px;
+  }
+
+  .categories__chemistry::after {
+    top: 30px;
+    right: 53px;
+
+    width: 40px;
+    height: 61px;
+
+    background-size: 40px 61px;
+  }
+
+  .categories__tyres::after {
+    top: 33px;
+    right: 41px;
+
+    width: 63px;
+    height: 63px;
+
+    background-size: 63px 63px;
+  }
+
+  .categories__instruments::after {
+    top: 22px;
+    right: 50px;
+
+    width: 44px;
+    height: 82px;
+
+    background-size: 44px 82px;
+  }
+
+  .categories__spares::after {
+    top: 37px;
+    right: 46px;
+
+    width: 55px;
+    height: 55px;
+
+    background-size: 55px 55px;
+  }
+
+  .categories__electronic::after {
+    top: 38px;
+    right: 42px;
+
+    width: 62px;
+    height: 49px;
+
+    background-size: 62px 49px;
+  }
+
+  .categories__accessories::after {
+    top: 33px;
+    right: 57px;
+
+    width: 29px;
+    height: 64px;
+
+    background-size: 29px 64px;
+  }
 }

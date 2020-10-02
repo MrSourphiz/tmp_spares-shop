@@ -523,13 +523,16 @@ p {
 .tabs__link:active {
   opacity: 0.3;
 }
-.tabs__link--active {
+.tabs__link--active,
+.tabs__link--search-active {
   font-weight: 700;
   color: #48494d;
   border-bottom: 2px solid #ff7931;
 }
 .tabs__link--active:active,
-.tabs__link--active:hover {
+.tabs__link--active:hover,
+.tabs__link--search-active:active,
+.tabs__link--search-active:hover {
   opacity: 1;
   cursor: default;
 }
@@ -541,6 +544,15 @@ p {
   color: #000000;
 }
 @media (min-width: 1171px) {
+  .tabs__link--search-active {
+    display: block;
+    padding-right: 20px;
+    padding-bottom: 13px;
+    padding-left: 20px;
+    background: #f0f0f4;
+    border-bottom: none;
+    border-radius: 5px;
+  }
   .tabs__link--active::before {
     content: "";
     display: block;
@@ -1775,6 +1787,54 @@ p {
   top: 10px;
   right: 10px;
   border: none;
+  cursor: pointer;
+}
+.search__text {
+  display: none;
+}
+@media (min-width: 1171px) {
+  .search__container {
+    width: 1170px;
+  }
+  .search__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .search__input {
+    width: 1023px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #656464;
+    padding-left: 20px;
+  }
+  .search__button {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 147px;
+    height: 50px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #ff7931;
+  }
+  .search__text {
+    display: block;
+  }
+  .search__logo {
+    display: none;
+  }
 }
 .categories {
   padding-top: 40px;
@@ -1807,16 +1867,18 @@ p {
 .categories__item::after {
   content: "";
   position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.categories__chemistry::after {
   top: 57px;
   right: 38px;
   width: 25px;
   height: 37px;
   background-image: url("/img/cat-chemistry.png");
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: 25px 37px;
 }
-.categories__item:nth-child(2)::after {
+.categories__tyres::after {
   top: 59px;
   right: 30px;
   width: 39px;
@@ -1824,7 +1886,7 @@ p {
   background-image: url("/img/cat-tyres.png");
   background-size: 39px 39px;
 }
-.categories__item:nth-child(3)::after {
+.categories__instruments::after {
   top: 52px;
   right: 36px;
   width: 27px;
@@ -1832,7 +1894,7 @@ p {
   background-image: url("/img/cat-instruments.png");
   background-size: 27px 50px;
 }
-.categories__item:nth-child(4)::after {
+.categories__spares::after {
   top: 60px;
   right: 33px;
   width: 34px;
@@ -1840,7 +1902,7 @@ p {
   background-image: url("/img/cat-spares.png");
   background-size: 34px 34px;
 }
-.categories__item:nth-child(5)::after {
+.categories__electronic::after {
   top: 62px;
   right: 31px;
   width: 38px;
@@ -1848,7 +1910,7 @@ p {
   background-image: url("/img/cat-electronics.png");
   background-size: 38px 30px;
 }
-.categories__item:nth-child(6)::after {
+.categories__accessories::after {
   top: 57px;
   right: 40px;
   width: 18px;
@@ -1889,6 +1951,75 @@ p {
   border-bottom: 1px solid #c4c4c4;
   -webkit-transform: rotate(310deg);
           transform: rotate(310deg);
+}
+@media (min-width: 1171px) {
+  .categories__list {
+    width: 1170px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .categories__item {
+    width: 370px;
+    height: 129px;
+  }
+  .categories__item::before {
+    top: 16px;
+    right: 25px;
+    width: 97px;
+    height: 97px;
+  }
+  .categories__chemistry::after {
+    top: 30px;
+    right: 53px;
+    width: 40px;
+    height: 61px;
+    background-size: 40px 61px;
+  }
+  .categories__tyres::after {
+    top: 33px;
+    right: 41px;
+    width: 63px;
+    height: 63px;
+    background-size: 63px 63px;
+  }
+  .categories__instruments::after {
+    top: 22px;
+    right: 50px;
+    width: 44px;
+    height: 82px;
+    background-size: 44px 82px;
+  }
+  .categories__spares::after {
+    top: 37px;
+    right: 46px;
+    width: 55px;
+    height: 55px;
+    background-size: 55px 55px;
+  }
+  .categories__electronic::after {
+    top: 38px;
+    right: 42px;
+    width: 62px;
+    height: 49px;
+    background-size: 62px 49px;
+  }
+  .categories__accessories::after {
+    top: 33px;
+    right: 57px;
+    width: 29px;
+    height: 64px;
+    background-size: 29px 64px;
+  }
 }
 .popular-items {
   margin-top: 40px;

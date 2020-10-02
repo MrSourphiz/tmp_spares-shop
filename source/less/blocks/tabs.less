@@ -40,14 +40,17 @@
   opacity: 0.3;
 }
 
-.tabs__link--active {
+.tabs__link--active,
+.tabs__link--search-active {
   font-weight: 700;
   color: #48494d;
   border-bottom: 2px solid #ff7931;
 }
 
 .tabs__link--active:active,
-.tabs__link--active:hover {
+.tabs__link--active:hover,
+.tabs__link--search-active:active,
+.tabs__link--search-active:hover {
   opacity: 1;
   cursor: default;
 }
@@ -61,6 +64,19 @@
 }
 
 @media (min-width: @desktop-width) {
+  .tabs__link--search-active {
+    display: block;
+
+    padding-right: 20px;
+    padding-bottom: 13px;
+    padding-left: 20px;
+
+    background: #f0f0f4;
+
+    border-bottom: none;
+    border-radius: 5px;
+  }
+
   .tabs__link--active::before {
     content: "";
     display: block;
