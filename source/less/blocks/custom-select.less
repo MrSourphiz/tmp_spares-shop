@@ -123,3 +123,36 @@
   padding-left: 0;
 }
 
+
+@media (min-width: @desktop-width) {
+  .custom-select {
+    width: 158px;
+  }
+
+  .custom-select__placeholder {
+    width: 158px;
+
+    padding-right: 10px;
+
+    border: 1px solid #c4c4c4;
+  }
+
+  .custom-select__items {
+    width: 180px;
+    background-color: #ffffff;
+
+    border: 1px solid #c4c4c4;
+    overflow: visible;
+  }
+
+  .custom-select__input--select:not(:checked) ~ .custom-select__items {
+    height: 17px;
+  }
+
+  .custom-select__items label {
+    width: 158px;
+    height: 17px;
+    padding-right: 10px;
+    padding-bottom: 9px;
+  }
+}

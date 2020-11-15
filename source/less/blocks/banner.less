@@ -1,18 +1,18 @@
 .banner {
-  width: 320px;
-  height: 64px;
-
   padding-top: 40px;
   padding-bottom: 40px;
-
-  margin: 0 auto;
 }
 
 .banner__container {
-  background: linear-gradient(90deg, rgba(137, 29, 208, 1) 0%, rgba(251, 139, 60, 1) 100%);
+  width: 320px;
+  height: 64px;
 
   padding-top: 14px;
   padding-bottom: 14px;
+
+  background: linear-gradient(90deg, rgba(137, 29, 208, 1) 0%, rgba(251, 139, 60, 1) 100%);
+
+  margin: 0 auto;
 }
 
 .banner__title {
@@ -38,15 +38,44 @@
   color: #ffffff;
 }
 
-.banner--tyres {
-  height: 195px;
-}
-
 .banner--tyres .banner__container {
+  height: 88px;
+
   padding-top: 61px;
   padding-bottom: 46px;
 }
 
 .banner--tyres .banner__title {
   margin-bottom: 34px;
+}
+
+.banner--tyres .banner__description {
+  font-weight: normal;
+}
+
+@media (min-width: @desktop-width) {
+  .banner__container {
+    width: 1170px;
+    height: 129px;
+
+    padding-top: 19px;
+    padding-bottom: 17px;
+  }
+
+  .banner__title {
+    font-size: 65px;
+    line-height: 65px;
+    font-weight: normal;
+
+    margin-bottom: 22px;
+  }
+
+  .banner__description {
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  .banner--tyres {
+    display: none;
+  }
 }

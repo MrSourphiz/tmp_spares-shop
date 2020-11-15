@@ -225,15 +225,15 @@
           </div>
 
           <div class="sorting__view">
-            <ul>
-              <li>
-                <button type="button">
-                    <span>показать плиткой</span>
+            <ul class="sorting__view-list">
+              <li class="sorting__view-item">
+                <button class="sorting__button sorting__tile-button" type="button">
+                    <span class="visually-hidden">показать плиткой</span>
                 </button>
               </li>
-              <li>
-                <button type="button">
-                    <span>показать списком</span>
+              <li class="sorting__view-item">
+                <button class="sorting__button sorting__list-button" type="button">
+                    <span class="visually-hidden">показать списком</span>
                 </button>
               </li>
             </ul>
@@ -266,11 +266,11 @@
             </li>
           </ul>
           <div class="filter__parameters" id="#filter-parameters">
-            <fieldset class="filter__seasonality">
+            <fieldset class="filter__switch-fieldset filter__seasonality">
               <legend class="filter__filedset-title">Сезонность</legend>
               <button class="filter__open-button" type="button">Сезонность</button>
-              <ul class="filter__seasonality-list">
-                <li class="filter__checkbox-item filter__checkbox-item--orange">
+              <ul class="filter__fieldset-list">
+                <li class="filter__checkbox-item filter__checkbox-item--info filter__checkbox-item--orange">
                   <button class="filter__info-button" type="button">
                     <span class="visually-hidden">
                       Справка
@@ -279,7 +279,7 @@
                   <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="seasonality-parameters" id="winter-parameters">
                   <label class="filter__filedset-label filter__filedset-label--orange" for="winter-parameters">Зимние</label>
                 </li>
-                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                <li class="filter__checkbox-item filter__checkbox-item--info filter__checkbox-item--orange">
                   <button class="filter__info-button" type="button">
                     <span class="visually-hidden">
                       Справка
@@ -291,11 +291,11 @@
               </ul>
             </fieldset>
 
-            <fieldset class="filter__tyres">
+            <fieldset class="filter__switch-fieldset filter__tyres">
               <legend class="filter__filedset-title">Тип шин</legend>
               <button class="filter__open-button" type="button">Тип шин</button>
-              <ul>
-                <li class="filter__checkbox-item filter__checkbox-item--orange">
+              <ul class="filter__fieldset-list">
+                <li class="filter__checkbox-item filter__checkbox-item--info filter__checkbox-item--orange">
                   <button class="filter__info-button" type="button">
                     <span class="visually-hidden">
                       Справка
@@ -304,7 +304,7 @@
                   <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="tyres-type" id="all">
                   <label class="filter__filedset-label filter__filedset-label--orange" for="all">Все</label>
                 </li>
-                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                <li class="filter__checkbox-item filter__checkbox-item--info filter__checkbox-item--orange">
                   <button class="filter__info-button" type="button">
                     <span class="visually-hidden">
                       Справка
@@ -313,7 +313,7 @@
                   <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="tyres-type" id="studded">
                   <label class="filter__filedset-label filter__filedset-label--orange" for="studded">Шипованные</label>
                 </li>
-                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                <li class="filter__checkbox-item filter__checkbox-item--info filter__checkbox-item--orange">
                   <button class="filter__info-button" type="button">
                     <span class="visually-hidden">
                       Справка
@@ -325,7 +325,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="filter__price">
+            <fieldset class="filter__switch-fieldset filter__price">
               <legend class="filter__filedset-title">Цена</legend>
               <button class="filter__open-button" type="button">Цена</button>
 
@@ -349,35 +349,38 @@
               </div>
             </fieldset>
 
-            <fieldset>
-              <legend class="filter__filedset-title">Диаметр</legend>
-              <button class="filter__open-button" type="button">Диаметр</button>
-              <select class="filter__filedset-select">
-                  <option>10</option>
-              </select>
+            <fieldset class="filter__select">
+              <div class="filter__select-wrapper">
+                <legend class="filter__filedset-title">Диаметр</legend>
+                <select class="filter__select-list">
+                    <option>10</option>
+                </select>
+              </div>
             </fieldset>
 
-            <fieldset>
-              <legend class="filter__filedset-title">Профиль</legend>
-              <button class="filter__open-button" type="button">Профиль</button>
-              <select class="filter__filedset-select">
-                  <option>10</option>
-              </select>
+            <fieldset class="filter__select">
+              <div class="filter__select-wrapper">
+                <legend class="filter__filedset-title">Профиль</legend>
+                <select class="filter__select-list">
+                    <option>10</option>
+                </select>
+              </div>
             </fieldset>
 
-            <fieldset>
-              <legend class="filter__filedset-title">Ширина</legend>
-              <button class="filter__open-button" type="button">Ширина</button>
-              <select class="filter__filedset-select">
-                  <option>10</option>
-              </select>
+            <fieldset class="filter__select">
+              <div class="filter__select-wrapper">
+                <legend class="filter__filedset-title">Ширина</legend>
+                <select class="filter__select-list">
+                    <option>10</option>
+                </select>
+              </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter__switch-fieldset">
               <legend class="filter__filedset-title">Бренд</legend>
               <button class="filter__open-button" type="button">Бренд</button>
               <input class="filter__text-input" type="text" placeholder="Введите бренд шины">
-              <ul>
+              <ul class="filter__fieldset-list filter__brand-list">
                 <li class="filter__checkbox-item filter__checkbox-item--orange">
                   <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="brand" id="B Gudrich">
                   <label class="filter__filedset-label filter__filedset-label--orange" for="B Gudrich">B Gudrich</label>
@@ -398,11 +401,11 @@
               <button class="filter__show-more-button" type="button">Показать еще</button>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter__switch-fieldset">
               <legend class="filter__filedset-title">Модель</legend>
               <button class="filter__open-button" type="button">Модель</button>
               <input class="filter__text-input" type="text" placeholder="Введите модель шины">
-              <ul>
+              <ul class="filter__fieldset-list filter__model-list">
                 <li class="filter__checkbox-item filter__checkbox-item--orange">
                   <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="model" id="ALINA">
                   <label class="filter__filedset-label filter__filedset-label--orange" for="ALINA">ALINA</label>
@@ -423,7 +426,7 @@
               <button class="filter__show-more-button" type="button">Показать еще</button>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter__switch-fieldset">
               <legend class="filter__filedset-title">Технология</legend>
               <button class="filter__open-button" type="button">Технология</button>
               <ul class="filter__checkbox-list--grey">
@@ -438,7 +441,7 @@
               </ul>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter__switch-fieldset">
               <legend class="filter__filedset-title">Акции</legend>
               <button class="filter__open-button" type="button">Акции</button>
               <ul class="filter__checkbox-list--grey">
@@ -461,10 +464,10 @@
               </ul>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter__switch-fieldset">
               <legend class="filter__filedset-title">Страны</legend>
               <button class="filter__open-button" type="button">Страны</button>
-              <ul>
+              <ul class="filter__fieldset-list filter__country-list">
                 <li class="filter__checkbox-item filter__checkbox-item--orange">
                   <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="country" id="russia">
                   <label class="filter__filedset-label filter__filedset-label--orange" for="russia">Россия</label>
@@ -486,11 +489,11 @@
             </fieldset>
           </div>
           <div class="filter__brands">
-            <fieldset class="filter__seasonality">
+            <fieldset class="filter__switch-fieldset filter__seasonality">
               <legend class="filter__filedset-title">Сезонность</legend>
               <button class="filter__open-button" type="button">Сезонность</button>
-              <ul class="filter__seasonality-list">
-                <li class="filter__checkbox-item filter__checkbox-item--orange">
+              <ul class="filter__fieldset-list">
+                <li class="filter__checkbox-item filter__checkbox-item--info filter__checkbox-item--orange">
                   <button class="filter__info-button" type="button">
                     <span class="visually-hidden">
                       Справка
@@ -499,7 +502,7 @@
                   <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="seasonality-brands" id="winter-brands">
                   <label class="filter__filedset-label filter__filedset-label--orange" for="winter-brands">Зимние</label>
                 </li>
-                <li class="filter__checkbox-item filter__checkbox-item--orange">
+                <li class="filter__checkbox-item filter__checkbox-item--info filter__checkbox-item--orange">
                   <button class="filter__info-button" type="button">
                     <span class="visually-hidden">
                       Справка
@@ -511,41 +514,44 @@
               </ul>
             </fieldset>
 
-            <fieldset class="filter__brand">
-              <legend class="filter__filedset-title">Марка</legend>
-              <button class="filter__open-button" type="button">Марка</button>
-              <select class="filter__filedset-select">
-                <option>BMW</option>
-              </select>
+            <fieldset class="filter__select">
+              <div class="filter__select-wrapper">
+                <legend class="filter__filedset-title">Марка</legend>
+                <select class="filter__select-list">
+                  <option>BMW</option>
+                </select>
+              </div>
             </fieldset>
 
-            <fieldset>
-              <legend class="filter__filedset-title">Модель</legend>
-              <button class="filter__open-button" type="button">Модель</button>
-              <select class="filter__filedset-select">
-                <option>1-series</option>
-              </select>
+            <fieldset class="filter__select">
+              <div class="filter__select-wrapper">
+                <legend class="filter__filedset-title">Модель</legend>
+                <select class="filter__select-list">
+                  <option>1-series</option>
+                </select>
+              </div>
             </fieldset>
 
-            <fieldset>
-              <legend class="filter__filedset-title">Кузов</legend>
-              <button class="filter__open-button" type="button">Кузов</button>
-              <select class="filter__filedset-select">
-                <option>E81 3d</option>
-              </select>
+            <fieldset class="filter__select">
+              <div class="filter__select-wrapper">
+                <legend class="filter__filedset-title">Кузов</legend>
+                <select class="filter__select-list">
+                  <option>E81 3d</option>
+                </select>
+              </div>
             </fieldset>
 
-            <fieldset>
-              <legend class="filter__filedset-title">Модификация</legend>
-              <button class="filter__open-button" type="button">Модификация</button>
-              <select class="filter__filedset-select">
-                <option>116 d</option>
-              </select>
+            <fieldset class="filter__select">
+              <div class="filter__select-wrapper">
+                <legend class="filter__filedset-title">Модификация</legend>
+                <select class="filter__select-list">
+                  <option>116 d</option>
+                </select>
+              </div>
             </fieldset>
 
             <fieldset>
               <legend class="filter__filedset-title">R16</legend>
-              <button class="filter__open-button" type="button">R16</button>
               <ul class="filter__checkbox-list--grey">
                 <li class="filter__checkbox-item">
                   <input class="visually-hidden filter__filedset-checkbox" type="checkbox" name="R16" id="205/55R17_1">
@@ -568,7 +574,6 @@
 
             <fieldset>
               <legend class="filter__filedset-title">R17</legend>
-              <button class="filter__open-button" type="button">R17</button>
               <ul class="filter__checkbox-list--grey">
                 <li>
                   <h3 class="filter__checkbox-title">Передняя ось</h3>
@@ -621,7 +626,6 @@
 
             <fieldset>
               <legend class="filter__filedset-title">R18</legend>
-              <button class="filter__open-button" type="button">R18</button>
 
               <ul class="filter__checkbox-list--grey">
                 <li class="filter__checkbox-item">
@@ -640,7 +644,7 @@
 
           <fieldset class="filter__extra-options">
             <legend>Дополнительные параметры</legend>
-            <button type="button">Дополнительные параметры</button>
+            <button class="filter__extra-button" type="button">Дополнительные параметры</button>
           </fieldset>
 
           <button class="filter__reset-button" type="reset">Сбросить фильтр</button>
@@ -648,7 +652,7 @@
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Каталог шин</h2>
-        <ul class="catalog__list catalog__list--mobile">
+        <ul class="catalog__list">
           <li class="catalog__item card">
             <div class="card__attributes">
               <button class="favorite favorite--active" title="Убрать из избранного" type="button">
@@ -1036,15 +1040,36 @@
 
     <section class="recently-viewed">
       <div class="recently-viewed__container">
-        <h2 class="recently-viewed__title">С этим покупают</h2>
-
+        <h2 class="recently-viewed__title">С этим товаром покупают</h2>
+        <div class="tabs">
+          <ul class="tabs__list">
+            <li class="tabs__item">
+              <a class="tabs__link tabs__link--active" href="#tabs-spares">запчасти</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-autochemicals">автохимия</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-tires">шины и диски</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-autoelectronics">автоэлектроника</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-tools">инструменты</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tabs-accessories">аксессуары и другое</a>
+            </li>
+          </ul>
+        </div>
         <ul class="recently-viewed__list">
-          <li class="recently-viewed__item" id="tabs-tires">
+          <li class="recently-viewed__item" id="tabs-spares">
             <div class="recently-viewed__slider">
               <input type="radio" class="slider__control control--1" name="recently-viewed-control" id="recently-viewed-1" checked>
               <input type="radio" class="slider__control control--2" name="recently-viewed-control" id="recently-viewed-2">
               <input type="radio" class="slider__control control--3" name="recently-viewed-control" id="recently-viewed-3">
-              <ul class="slider__list">
+              <ul class="recently-viewed__slider-list slider__list">
                 <li class="recently-viewed__slide card slide--1">
                   <div class="card__attributes">
                     <button class="favorite favorite--active" title="Убрать из избранного" type="button">
@@ -1132,7 +1157,46 @@
                     </span>
                   </a>
                 </li>
+                <li class="recently-viewed__slide card card--sale slide--4">
+                  <div class="card__attributes">
+                    <button class="favorite" title="Добавить в избранное" type="button">
+                      <span class="visually-hidden">
+                        Убрать из избранного
+                      </span>
+                    </button>
+                    <span class="card__winter" aria-hidden="true"></span>
+                  </div>
+                  <a class="card__overlay" href="#">быстрый просмотр</a>
+                  <figure class="card__fig">
+                    <picture>
+                      <source type="image/webp" srcset="img/tire-2@1x.webp 1x, img/tire-2@2x.webp 2x">
+                      <!-- 1х: 151px; 2x: 302px -->
+                      <img src="img/tire-2@1x.jpg" srcset="img/tire-2@2x.jpg 2x" width="151" height="181" alt="Автомобильное колесо">
+                    </picture>
+                    <figcaption class="card__figcaption">Шина 205/80 R16 104Q Misha RF Power Grum</figcaption>
+                  </figure>
+                  <div class="card__presence card__presence--none">
+                    <div class="card__presence-text">Нет в наличии</div>
+                    <a class="card__presence-link" href="#">Сообщить о поступлении</a>
+                  </div>
+                  <div class="card__price"></div>
+                  <a class="card__link" href="item-page.html">
+                    <span class="visually-hidden">
+                      Перейти на страницу товара
+                    </span>
+                  </a>
+                </li>
               </ul>
+
+              <ul class="recently-viewed__arrows">
+                <li class="recently-viewed__arrow recently-viewed__arrow--prev">
+                  <button class="recently-viewed__arrow-button recently-viewed__arrow-button--prev" type="button"></button>
+                </li>
+                <li class="recently-viewed__arrow recently-viewed__arrow--next">
+                  <button class="recently-viewed__arrow-button recently-viewed__arrow-button--next" type="button"></button>
+                </li>
+              </ul>
+
               <ul class="recently-viewed__switchers slider__switchers">
                 <li>
                   <label class="recently-viewed__switch switch--1" for="recently-viewed-1"></label>
@@ -1144,6 +1208,31 @@
                   <label class="recently-viewed__switch switch--3" for="recently-viewed-3"></label>
                 </li>
               </ul>
+            </div>
+          </li>
+          <li class="recently-viewed__item visually-hidden" id="tabs-autochemicals">
+            <div class="slider">
+              <p>будет позже</p>
+            </div>
+          </li>
+          <li class="recently-viewed__item visually-hidden" id="tabs-tires">
+            <div class="slider">
+              <p>будет позже</p>
+            </div>
+          </li>
+          <li class="recently-viewed__item visually-hidden" id="tabs-autoelectronics">
+            <div class="slider">
+              <p>будет позже</p>
+            </div>
+          </li>
+          <li class="recently-viewed__item visually-hidden" id="tabs-tools">
+            <div class="slider">
+              <p>будет позже</p>
+            </div>
+          </li>
+          <li class="recently-viewed__item visually-hidden" id="tabs-accessories">
+            <div class="slider">
+              <p>будет позже</p>
             </div>
           </li>
         </ul>

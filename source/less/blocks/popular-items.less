@@ -84,3 +84,34 @@
 .popular-items__button {
   .mobile-button-grey();
 }
+
+@media (min-width: @desktop-width) {
+  .popular-items__container {
+    width: 1170px;
+  }
+
+  .popular-items__title {
+    text-align: left;
+  }
+
+  .popular-items__slider-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .popular-items__slider-item {
+    display: block;
+
+    margin-bottom: 35px;
+  }
+
+  .popular-items__switchers {
+    display: none;
+  }
+
+  .popular-items__button {
+    margin-left: 459px;
+  }
+}

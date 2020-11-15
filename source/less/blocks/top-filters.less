@@ -159,3 +159,70 @@
   background-image: url("../img/filter.svg");
   background-repeat: no-repeat;
 }
+
+@media (min-width: @desktop-width) {
+  .top-filters {
+    width: 1170px;
+  }
+
+  .top-filters__title {
+    font-size: 30px;
+    line-height: 34px;
+
+    padding-left: 0;
+  }
+
+  .top-filters__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .top-filters__sorting-type--wrap {
+    padding: 0;
+    border: none;
+    margin: 0;
+  }
+
+  .top-filters__sorting-type::before {
+    display: none;
+  }
+
+  .top-filters__city-select {
+    display: none;
+  }
+
+  .sorting__mobile {
+    display: none;
+  }
+
+  .sorting__view {
+    display: block;
+  }
+
+  .sorting__view-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 58px;
+  }
+
+  .sorting__button {
+    width: 26px;
+    height: 21px;
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  .sorting__tile-button {
+    background-image: url("../img/group-table.svg");
+    background-repeat: no-repeat;
+  }
+
+  .sorting__list-button {
+    background-image: url("../img/group-list.svg");
+    background-repeat: no-repeat;
+  }
+}

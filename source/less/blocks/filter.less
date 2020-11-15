@@ -60,11 +60,11 @@
   margin-bottom: 30px;
 }
 
-.filter__form--mobile .filter__open-button,
-.filter__form--mobile .filter__apply-button,
-.filter__form--mobile .filter__extra-options,
-.filter__form--mobile .filter__reset-button,
-.filter__form--mobile .filter__text-input {
+.filter__open-button,
+.filter__apply-button,
+.filter__extra-options,
+.filter__reset-button,
+.filter__text-input {
   display: none;
 }
 
@@ -148,7 +148,7 @@
   margin-left: 26px;
 }
 
-.filter__filedset-select {
+.filter__select-list {
   width: 270px;
   height: 38px;
   padding-left: 15px;
@@ -412,4 +412,217 @@
 
   border: none;
   border-bottom: 1px solid #e0e0e0;
+}
+
+@media (min-width: @desktop-width) {
+  .filter {
+    display: block;
+  }
+
+  .filter__header {
+    display: none;
+  }
+
+  .filter__form {
+    width: 290px;
+  }
+
+  .filter__type-list {
+    margin-top: 0;
+  }
+
+  .filter__fieldset-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .filter__open-button {
+    position: relative;
+
+    display: block;
+
+    font-size: 16px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: bold;
+
+    color: #48494d;
+
+    background-color: transparent;
+
+    border: none;
+
+    margin-left: 26px;
+  }
+
+  .filter__open-button::before {
+    content: "";
+
+    position: absolute;
+    top: 2px;
+    left: -26px;
+
+    width: 9px;
+    height: 9px;
+
+    border-right: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+
+    transform: rotate(45deg);
+  }
+
+  .filter__filedset-title,
+  .filter__checkbox-list--grey {
+    margin-left: 0;
+  }
+
+  .filter__switch-fieldset .filter__filedset-title {
+    display: none;
+  }
+
+  .filter__select-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 290px;
+
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .filter__select-list {
+    width: 110px;
+    border: none;
+    margin: 0;
+
+    cursor: pointer;
+  }
+
+  .filter__brand-list,
+  .filter__model-list,
+  .filter__country-list {
+    width: 225px;
+  }
+
+  .filter__checkbox-item--orange {
+    display: flex;
+    flex-direction: row;
+    border-bottom: none;
+    width: 70px;
+  }
+
+  .filter__checkbox-item--info {
+    flex-direction: row-reverse;
+    width: auto;
+  }
+
+  .filter__info-button {
+    margin-right: 0;
+    margin-left: 9px;
+  }
+
+  .filter__filedset-label--orange::before {
+    left: 0;
+    right: initial;
+  }
+
+  .filter__filedset-label--orange::after {
+    left: 5px;
+    right: initial;
+  }
+
+  .filter__show-more-button {
+    width: auto;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: none;
+    text-decoration: underline;
+
+    color: #ff7931;
+
+    background-color: transparent;
+
+    border: none;
+
+    margin: 0;
+    margin-top: 15px;
+
+    cursor: pointer;
+  }
+
+  .filter__apply-button {
+    display: block;
+
+    .mobile-button-grey();
+    width: 252px;
+
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .filter__extra-options {
+    display: block;
+  }
+
+  .filter__extra-options legend {
+    display: none;
+  }
+
+  .filter__extra-button {
+    position: relative;
+
+    display: block;
+
+    width: 252px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+
+    color: #6f6f6f;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  .filter__extra-button::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 10px;
+
+    width: 9px;
+    height: 9px;
+
+    border-right: 2px solid #a4a4a4;
+    border-bottom: 2px solid #a4a4a4;
+
+    transform: rotate(45deg);
+  }
+
+  .filter__reset-button {
+    display: block;
+
+    width: 252px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    text-decoration: underline;
+
+    color: #bdbec2;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+  }
 }

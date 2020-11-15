@@ -28,6 +28,14 @@
   display: none;
 }
 
+.recently-viewed__arrows {
+  display: none;
+}
+
+.recently-viewed__slider-arrows {
+  display: none;
+}
+
 .recently-viewed__switchers {
   position: absolute;
   bottom: -25px;
@@ -82,4 +90,107 @@
 
 .recently-viewed__button {
   .mobile-button-grey();
+}
+
+@media (min-width: @desktop-width) {
+  .page-catalog .recently-viewed {
+    display: none;
+  }
+
+  .recently-viewed__container {
+    width: 1170px;
+  }
+
+  .recently-viewed__title {
+    text-align: left;
+  }
+
+  .recently-viewed__slider-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .recently-viewed__slide {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .recently-viewed__arrows {
+    display: block;
+  }
+
+  .recently-viewed__arrow {
+    position: absolute;
+    top: 181px;
+  }
+
+  .recently-viewed__arrow--prev {
+    left: -67px;
+  }
+
+  .recently-viewed__arrow--next {
+    right: -67px;
+  }
+
+  .recently-viewed__arrow-button {
+    position: relative;
+
+    width: 36px;
+    height: 36px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #c4c4c4;
+    border-radius: 100%;
+
+    cursor: pointer;
+  }
+
+  .recently-viewed__arrow-button::before {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    border-right: 2px solid #c4c4c4;
+    border-bottom: 2px solid #c4c4c4;
+  }
+
+  .recently-viewed__arrow-button--prev::before {
+    top: 11px;
+    left: 14px;
+
+    transform: rotate(135deg);
+  }
+
+  .recently-viewed__arrow-button--next::before {
+    top: 11px;
+    right: 14px;
+
+    transform: rotate(-45deg);
+  }
+
+  .recently-viewed__arrow-button:hover,
+  .recently-viewed__arrow-button:focus,
+  .recently-viewed__arrow-button:hover::before,
+  .recently-viewed__arrow-button:focus::before {
+    border-color: #48494d;
+  }
+
+  .recently-viewed__arrow-button:active,
+  .recently-viewed__arrow-button:active::before {
+    border-color: #bdbec2;
+  }
+
+  .recently-viewed__switchers {
+    display: none;
+  }
+
+  .recently-viewed__button {
+    display: none;
+  }
 }
